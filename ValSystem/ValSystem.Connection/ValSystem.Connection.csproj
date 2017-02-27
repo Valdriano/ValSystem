@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="Connections.cs" />
     <Compile Include="IConnections.cs" />
+    <Compile Include="IVersao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Versao.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ValSystemDB.mdb">

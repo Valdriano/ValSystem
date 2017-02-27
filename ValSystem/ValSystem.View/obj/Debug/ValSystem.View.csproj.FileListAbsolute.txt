@@ -1,0 +1,7 @@
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\bin\Debug\ValSystem.View.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\bin\Debug\ValSystem.View.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.csprojResolveAssemblyReference.cache
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.AppForm.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.csproj.GenerateResource.Cache
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.pdb

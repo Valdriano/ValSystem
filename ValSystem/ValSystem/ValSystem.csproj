@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -78,6 +93,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ValSystem.Connection\ValSystem.Connection.csproj">
+      <Project>{ca12dccb-8956-47bf-9448-8209581a83fe}</Project>
+      <Name>ValSystem.Connection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Controller\ValSystem.Controller.csproj">
+      <Project>{b3b8e380-5232-4135-beb1-4e18a58037f8}</Project>
+      <Name>ValSystem.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Model\ValSystem.Model.csproj">
+      <Project>{f1fe3d50-e479-41af-b3cc-31f0bf8f3913}</Project>
+      <Name>ValSystem.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Util\ValSystem.Util.csproj">
+      <Project>{59736916-c80e-4c05-9416-9c9ed03e38af}</Project>
+      <Name>ValSystem.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.View\ValSystem.View.csproj">
+      <Project>{44e9c0b2-9729-47b7-8b32-0f61d7448a57}</Project>
+      <Name>ValSystem.View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

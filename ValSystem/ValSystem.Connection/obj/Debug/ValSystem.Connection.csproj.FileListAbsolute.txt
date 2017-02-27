@@ -1,0 +1,5 @@
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Connection\bin\Debug\ValSystemDB.mdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Connection\bin\Debug\ValSystem.Connection.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Connection\bin\Debug\ValSystem.Connection.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Connection\obj\Debug\ValSystem.Connection.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Connection\obj\Debug\ValSystem.Connection.pdb
