@@ -34,9 +34,9 @@
             this.SenhatextBox = new System.Windows.Forms.TextBox();
             this.OKbutton = new System.Windows.Forms.Button();
             this.Sairbutton = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStrip1.SuspendLayout();
+            this.LoginstatusStrip = new System.Windows.Forms.StatusStrip();
+            this.Versaotssl = new System.Windows.Forms.ToolStripStatusLabel();
+            this.LoginstatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -94,33 +94,33 @@
             this.Sairbutton.Text = "Sair";
             this.Sairbutton.UseVisualStyleBackColor = true;
             // 
-            // statusStrip1
+            // LoginstatusStrip
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 100);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(261, 24);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 6;
-            this.statusStrip1.Text = "statusStrip1";
+            this.LoginstatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Versaotssl});
+            this.LoginstatusStrip.Location = new System.Drawing.Point(0, 100);
+            this.LoginstatusStrip.Name = "LoginstatusStrip";
+            this.LoginstatusStrip.Size = new System.Drawing.Size(261, 24);
+            this.LoginstatusStrip.SizingGrip = false;
+            this.LoginstatusStrip.TabIndex = 6;
+            this.LoginstatusStrip.Text = "Login";
             // 
-            // toolStripStatusLabel1
+            // Versaotssl
             // 
-            this.toolStripStatusLabel1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            this.Versaotssl.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(246, 19);
-            this.toolStripStatusLabel1.Spring = true;
-            this.toolStripStatusLabel1.Text = "Versão: 1.0.0.0";
+            this.Versaotssl.Name = "Versaotssl";
+            this.Versaotssl.Size = new System.Drawing.Size(246, 19);
+            this.Versaotssl.Spring = true;
+            this.Versaotssl.Text = "Versão: 1.0.0.0";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 124);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.LoginstatusStrip);
             this.Controls.Add(this.Sairbutton);
             this.Controls.Add(this.OKbutton);
             this.Controls.Add(this.SenhatextBox);
@@ -132,8 +132,9 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.LoginstatusStrip.ResumeLayout(false);
+            this.LoginstatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,8 +148,8 @@
         private System.Windows.Forms.TextBox SenhatextBox;
         private System.Windows.Forms.Button OKbutton;
         private System.Windows.Forms.Button Sairbutton;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.StatusStrip LoginstatusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel Versaotssl;
     }
 }
 

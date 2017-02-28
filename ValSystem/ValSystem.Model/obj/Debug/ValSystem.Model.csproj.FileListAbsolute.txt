@@ -2,3 +2,5 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debu
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\ValSystem.Model.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\obj\Debug\ValSystem.Model.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\obj\Debug\ValSystem.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\ValSystem.Model.dll.config
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\obj\Debug\ValSystem.Model.csprojResolveAssemblyReference.cache
