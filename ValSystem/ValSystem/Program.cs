@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ValSystem.Controller;
+using ValSystem.Model;
 
 namespace ValSystem
 {
@@ -23,6 +25,26 @@ namespace ValSystem
             conf.Save( ConfigurationSaveMode.Modified );
 
             ConfigurationManager.RefreshSection( "appSetting" );
+
+            AppController context = new AppController();
+
+            if ( context.Perfis.Where( w => w.Descricao == "ADMINISTRADOR" ).Count() == 0 )
+            {
+                context.Perfis.Add( new Perfil { Descricao = "ADMINISTRADOR" } );
+                context.SaveChanges();
+            }
+
+            if ( context.Perfis.Where( w => w.Descricao == "USUÁRIO" ).Count() == 0 )
+            {
+                context.Perfis.Add( new Perfil { Descricao = "USUÁRIO" } );
+                context.SaveChanges();
+            }
+
+            if ( context.Usuarios.Where( w => w.Descricao == "SUPERVISOR" ).Count() == 0 )
+            {
+                context.Usuarios.Add( new Usuario { Bloqueado = false, Descricao = "SUPERVISOR", IdPerfil = 1, Senha = "SELVA406" } );
+                context.SaveChanges();
+            }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault( false );

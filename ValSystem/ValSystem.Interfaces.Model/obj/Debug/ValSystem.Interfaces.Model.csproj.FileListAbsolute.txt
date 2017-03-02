@@ -1,0 +1,7 @@
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Model\bin\Debug\ValSystem.Interfaces.Model.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Model\bin\Debug\ValSystem.Interfaces.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Model\obj\Debug\ValSystem.Interfaces.Model.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Model\obj\Debug\ValSystem.Interfaces.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Model\bin\Debug\ValSystemDB.mdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Model\bin\Debug\ValSystem.Interfaces.Model.dll.config
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Model\obj\Debug\ValSystem.Interfaces.Model.csprojResolveAssemblyReference.cache

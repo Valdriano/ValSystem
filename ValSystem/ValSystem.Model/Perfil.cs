@@ -7,7 +7,7 @@ namespace ValSystem.Model
     {
         public Perfil()
         {
-            Usuarios = new List<Usuario>();
+            Usuarios = new HashSet<Usuario>();
         }
 
         public int IdPerfil { get; set; }

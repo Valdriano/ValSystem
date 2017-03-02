@@ -81,10 +81,19 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +126,22 @@
     <ProjectReference Include="..\ValSystem.Controller\ValSystem.Controller.csproj">
       <Project>{b3b8e380-5232-4135-beb1-4e18a58037f8}</Project>
       <Name>ValSystem.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Controls\ValSystem.Controls.csproj">
+      <Project>{1bd7c3e8-1310-42ef-9f83-e4ed24e71206}</Project>
+      <Name>ValSystem.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Interfaces.Controller\ValSystem.Interfaces.Controller.csproj">
+      <Project>{58c9d2f4-2e3b-409d-a7f4-743d1f0a9946}</Project>
+      <Name>ValSystem.Interfaces.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Interfaces.Model\ValSystem.Interfaces.Model.csproj">
+      <Project>{e1f568d6-7a1b-4c43-bed6-2b3a2a495330}</Project>
+      <Name>ValSystem.Interfaces.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Interfaces.View\ValSystem.Interfaces.View.csproj">
+      <Project>{b415803b-28c4-4a85-8a2d-91aff071db88}</Project>
+      <Name>ValSystem.Interfaces.View</Name>
     </ProjectReference>
     <ProjectReference Include="..\ValSystem.Model\ValSystem.Model.csproj">
       <Project>{f1fe3d50-e479-41af-b3cc-31f0bf8f3913}</Project>

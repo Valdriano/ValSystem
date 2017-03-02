@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ValSystem.Model
 {
@@ -7,7 +6,7 @@ namespace ValSystem.Model
     {
         public Usuario()
         {
-            Perfis = new List<Perfil>();
+            //Perfis = new HashSet<Perfil>();
         }
 
         public int IdUsuario { get; set; }
@@ -17,7 +16,9 @@ namespace ValSystem.Model
         public string Senha { get; set; }
         public bool Bloqueado { get; set; }
         public int IdPerfil { get; set; }
-        public virtual ICollection<Perfil> Perfis { get; set; }
+        //public byte[] RowVersion { get; set; }
+
+        //public virtual ICollection<Perfil> Perfis { get; set; }
 
         public override string ToString()
         {

@@ -16,3 +16,5 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\JetEntityFrameworkProvider.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\EntityFramework.xml
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\ValSystem.View.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\ValSystem.View.pdb

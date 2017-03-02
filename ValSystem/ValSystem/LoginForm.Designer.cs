@@ -84,15 +84,18 @@
             this.OKbutton.TabIndex = 2;
             this.OKbutton.Text = "OK";
             this.OKbutton.UseVisualStyleBackColor = true;
+            this.OKbutton.Click += new System.EventHandler(this.OKbutton_Click);
             // 
             // Sairbutton
             // 
+            this.Sairbutton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Sairbutton.Location = new System.Drawing.Point(167, 62);
             this.Sairbutton.Name = "Sairbutton";
             this.Sairbutton.Size = new System.Drawing.Size(75, 23);
             this.Sairbutton.TabIndex = 3;
             this.Sairbutton.Text = "Sair";
             this.Sairbutton.UseVisualStyleBackColor = true;
+            this.Sairbutton.Click += new System.EventHandler(this.Sairbutton_Click);
             // 
             // LoginstatusStrip
             // 
@@ -117,8 +120,10 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.OKbutton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.Sairbutton;
             this.ClientSize = new System.Drawing.Size(261, 124);
             this.Controls.Add(this.LoginstatusStrip);
             this.Controls.Add(this.Sairbutton);
@@ -128,6 +133,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

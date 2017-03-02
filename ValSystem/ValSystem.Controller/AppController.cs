@@ -13,8 +13,12 @@ namespace ValSystem.Controller
             Configuration.ProxyCreationEnabled = false;
         }
 
-        public DbSet<Perfil> Perfis { get; set; }
-        public DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Perfil> Perfis { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Modulo> Modulos { get; set; }
+        public virtual DbSet<ModuloItem> ModulosItens { get; set; }
+        public virtual DbSet<Rotina> Rotinas { get; set; }
+        public virtual DbSet<RotinaItem> RotinasItens { get; set; }
 
         protected override void OnModelCreating( DbModelBuilder modelBuilder )
         {
@@ -28,7 +32,10 @@ namespace ValSystem.Controller
 
             modelBuilder.Entity<Perfil>().HasKey( k => k.IdPerfil );
             modelBuilder.Entity<Usuario>().HasKey( k => k.IdUsuario );
-
+            modelBuilder.Entity<Modulo>().HasKey( k => k.IdModulo );
+            modelBuilder.Entity<ModuloItem>().HasKey( k => k.IdModuloItem );
+            modelBuilder.Entity<Rotina>().HasKey( k => k.IdRotina );
+            modelBuilder.Entity<RotinaItem>().HasKey( k => k.IdRotinaItem );
         }
 
     }

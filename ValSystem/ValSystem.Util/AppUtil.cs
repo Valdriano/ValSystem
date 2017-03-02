@@ -42,7 +42,8 @@ namespace ValSystem.Util
         {
             get
             {
-                return new Uri( Assembly.GetExecutingAssembly().CodeBase ).LocalPath;
+                //return new Uri( Assembly.GetExecutingAssembly().CodeBase ).LocalPath;
+                return AppDomain.CurrentDomain.BaseDirectory;
             }
         }
 

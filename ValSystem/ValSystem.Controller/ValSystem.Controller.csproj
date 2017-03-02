@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppController.cs" />
+    <Compile Include="MenuController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +70,10 @@
     <ProjectReference Include="..\ValSystem.Util\ValSystem.Util.csproj">
       <Project>{59736916-c80e-4c05-9416-9c9ed03e38af}</Project>
       <Name>ValSystem.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.View\ValSystem.View.csproj">
+      <Project>{44e9c0b2-9729-47b7-8b32-0f61d7448a57}</Project>
+      <Name>ValSystem.View</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

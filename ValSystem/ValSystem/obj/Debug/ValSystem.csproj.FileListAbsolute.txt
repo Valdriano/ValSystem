@@ -23,3 +23,12 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\Enti
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\JetEntityFrameworkProvider.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\EntityFramework.xml
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\obj\Debug\ValSystem.MenuForm.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\ValSystem.Interfaces.Controller.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\ValSystem.Interfaces.Model.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\ValSystem.Interfaces.View.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\ValSystem.Interfaces.Controller.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\ValSystem.Interfaces.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\ValSystem.Interfaces.View.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\ValSystem.Controls.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem\bin\Debug\ValSystem.Controls.pdb
