@@ -3,4 +3,14 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debu
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\obj\Debug\ValSystem.Model.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\obj\Debug\ValSystem.Model.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\ValSystem.Model.dll.config
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\EntityFramework.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\EntityFramework.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\obj\Debug\ValSystem.Model.csprojResolveAssemblyReference.cache
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\System.Data.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\ValSystem.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\ValSystem.SQLite.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Model\bin\Debug\System.Data.SQLite.xml

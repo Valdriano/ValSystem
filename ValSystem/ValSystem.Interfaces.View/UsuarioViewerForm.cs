@@ -16,9 +16,9 @@ namespace ValSystem.Interfaces.View
 
             this.Janela_IDModulo = "1";
             this.Janela_Modulo = "Configurações do Sistema";
-            this.Janela_IDModuloItem = "20";
+            this.Janela_IDModuloItem = "10";
             this.Janela_ModuloItem = "Cadastros";
-            this.Janela_IDRotina = "200";
+            this.Janela_IDRotina = "101";
             this.Janela_Rotina = "Usuários";
             this.Janela_RotinaItem = new List<string>();
 

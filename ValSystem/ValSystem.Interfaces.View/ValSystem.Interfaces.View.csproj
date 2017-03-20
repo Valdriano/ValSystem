@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuToolForm.Designer.cs">
+      <DependentUpon>MenuToolForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioViewerForm.cs">
       <SubType>Form</SubType>
@@ -51,6 +57,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ValSystem.Controller\ValSystem.Controller.csproj">
+      <Project>{B3B8E380-5232-4135-BEB1-4E18A58037F8}</Project>
+      <Name>ValSystem.Controller</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ValSystem.Controls\ValSystem.Controls.csproj">
       <Project>{1bd7c3e8-1310-42ef-9f83-e4ed24e71206}</Project>
       <Name>ValSystem.Controls</Name>
@@ -73,6 +83,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MenuToolForm.resx">
+      <DependentUpon>MenuToolForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuarioViewerForm.resx">
       <DependentUpon>UsuarioViewerForm.cs</DependentUpon>
     </EmbeddedResource>

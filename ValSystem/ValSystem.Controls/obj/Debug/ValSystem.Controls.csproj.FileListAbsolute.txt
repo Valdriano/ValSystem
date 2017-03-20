@@ -1,5 +1,4 @@
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\bin\Debug\ValSystem.Controls.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\bin\Debug\ValSystem.Controls.pdb
-C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\obj\Debug\ValSystem.Controls.csprojResolveAssemblyReference.cache
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\obj\Debug\ValSystem.Controls.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\obj\Debug\ValSystem.Controls.pdb

@@ -92,49 +92,51 @@ namespace ValSystem
                 Application.DoEvents();
                 Cursor.Current = Cursors.WaitCursor;
 
-                AppController context = new AppController();
-                DataSet ds = new DataSet();
-                Usuario drUsuario = context.Usuarios.Single( s => s.Descricao == this.UsuariotextBox.Text.Trim() && s.Senha == this.SenhatextBox.Text.Trim() );
-
-                if ( context.Usuarios.Count() > 0 )
+                using ( AppDbContext context = new AppDbContext( "valsystemDb" ) )
                 {
-                    DataTable dtUsuarios = new DataTable( "Usuarios" );
-                    DataColumn IdUsuario = new DataColumn { DataType = typeof( int ), ColumnName = "IdUsuario" };
-                    DataColumn Descricao = new DataColumn { DataType = typeof( string ), ColumnName = "Descricao" };
-                    DataColumn Bloqueado = new DataColumn { DataType = typeof( bool ), ColumnName = "Bloqueado" };
-                    DataColumn IdPerfil = new DataColumn { DataType = typeof( int ), ColumnName = "IdPerfil" };
-                    dtUsuarios.Columns.AddRange( new DataColumn[] { IdUsuario, Descricao, Bloqueado, IdPerfil } );
+                    DataSet ds = new DataSet();
+                    Usuario drUsuario = context.Set<Usuario>().Single( s => s.Descricao == this.UsuariotextBox.Text.Trim() && s.Senha == this.SenhatextBox.Text.Trim() );
 
-                    DataRow drUsr = dtUsuarios.NewRow();
-                    drUsr[ IdUsuario ] = drUsuario.IdUsuario;
-                    drUsr[ Descricao ] = drUsuario.Descricao;
-                    drUsr[ Bloqueado ] = drUsuario.Bloqueado;
-                    drUsr[ IdPerfil ] = drUsuario.IdPerfil;
-                    dtUsuarios.Rows.Add( drUsr );
+                    if ( context.Set<Usuario>().Count() > 0 )
+                    {
+                        DataTable dtUsuarios = new DataTable( "Usuarios" );
+                        DataColumn IdUsuario = new DataColumn { DataType = typeof( int ), ColumnName = "IdUsuario" };
+                        DataColumn Descricao = new DataColumn { DataType = typeof( string ), ColumnName = "Descricao" };
+                        DataColumn Bloqueado = new DataColumn { DataType = typeof( bool ), ColumnName = "Bloqueado" };
+                        DataColumn IdPerfil = new DataColumn { DataType = typeof( int ), ColumnName = "IdPerfil" };
+                        dtUsuarios.Columns.AddRange( new DataColumn[] { IdUsuario, Descricao, Bloqueado, IdPerfil } );
 
-                    DataTable dt = new DataTable( "Configuracao" );
-                    DataColumn VersaoColumn = new DataColumn { DataType = Type.GetType( "System.String" ), ColumnName = "Versao" };
-                    dt.Columns.Add( VersaoColumn );
+                        DataRow drUsr = dtUsuarios.NewRow();
+                        drUsr[ IdUsuario ] = drUsuario.Id;
+                        drUsr[ Descricao ] = drUsuario.Descricao;
+                        drUsr[ Bloqueado ] = drUsuario.Bloqueado;
+                        drUsr[ IdPerfil ] = drUsuario.IdPerfil;
+                        dtUsuarios.Rows.Add( drUsr );
 
-                    DataRow dr = dt.NewRow();
-                    dr[ VersaoColumn ] = this.Versaotssl.Text;
-                    dt.Rows.Add( dr );
+                        DataTable dt = new DataTable( "Configuracao" );
+                        DataColumn VersaoColumn = new DataColumn { DataType = Type.GetType( "System.String" ), ColumnName = "Versao" };
+                        dt.Columns.Add( VersaoColumn );
 
-                    ds.Tables.AddRange( new DataTable[] { dt, dtUsuarios } );
+                        DataRow dr = dt.NewRow();
+                        dr[ VersaoColumn ] = this.Versaotssl.Text;
+                        dt.Rows.Add( dr );
 
-                    MenuForm oViewer = new MenuForm( ds );
+                        ds.Tables.AddRange( new DataTable[] { dt, dtUsuarios } );
 
-                    oViewer.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show( "Atenção\n\nUsuário ou Senha incorreta!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+                        MenuForm oViewer = new MenuForm( ds );
 
-                    this.SenhatextBox.Focus();
-                    this.SenhatextBox.Select( 0, this.SenhatextBox.Text.Length );
+                        oViewer.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show( "Atenção\n\nUsuário ou Senha incorreta!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning );
 
-                    return;
+                        this.SenhatextBox.Focus();
+                        this.SenhatextBox.Select( 0, this.SenhatextBox.Text.Length );
+
+                        return;
+                    }
                 }
             }
             catch ( Exception ex )

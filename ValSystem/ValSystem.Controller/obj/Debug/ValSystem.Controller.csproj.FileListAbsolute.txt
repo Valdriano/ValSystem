@@ -18,3 +18,9 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\ValSystem.View.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\ValSystem.View.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\System.Data.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\ValSystem.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\System.Data.SQLite.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controller\bin\Debug\ValSystem.SQLite.pdb

@@ -2,4 +2,3 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Util\bin\Debug
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Util\bin\Debug\ValSystem.Util.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Util\obj\Debug\ValSystem.Util.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Util\obj\Debug\ValSystem.Util.pdb
-C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Util\obj\Debug\ValSystem.Util.csprojResolveAssemblyReference.cache

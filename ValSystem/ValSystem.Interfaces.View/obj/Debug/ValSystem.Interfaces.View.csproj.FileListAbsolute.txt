@@ -18,3 +18,12 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Vie
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.Interfaces.Model.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.Util.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.Connection.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\obj\Debug\ValSystem.Interfaces.View.MenuToolForm.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.Controller.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\EntityFramework.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.Model.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.Controller.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\EntityFramework.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.SQLite.pdb

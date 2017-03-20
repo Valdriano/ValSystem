@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using ValSystem.Controller;
+using ValSystem.Interfaces.View;
 using ValSystem.Util;
 
 namespace ValSystem
@@ -53,22 +54,33 @@ namespace ValSystem
             }
         }
 
-        async void CarregarMenuTreeView( int IdUsuario, int IdPerfil )
+        public async void CarregarMenuTreeView( int IdUsuario, int IdPerfil )
         {
             MenuController menu = new MenuController();
 
             this.MenutreeView.Nodes.AddRange( await menu.CarregarMenuTreeNode( IdUsuario, IdPerfil ) );
 
+            if ( this.MenutreeView.Nodes.Count == 0 )
+            {
+                MenuToolForm oMenu = new MenuToolForm();
+
+                oMenu.AppForm = this;
+                oMenu.Show();
+            }
         }
 
         private void MenutreeView_DoubleClick( object sender, EventArgs e )
         {
-            if ( sender is TreeView )
+            try
             {
-                Form oForm = new MenuController().CarregarRotina( ( TreeView )sender );
-
-                if ( oForm != null )
-                    oForm.Show();
+                if ( sender is TreeView )
+                {
+                    new MenuController().CarregarRotina( ( TreeView )sender, this );
+                }
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show( this, $"Erro\n\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1 );
             }
         }
     }

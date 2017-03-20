@@ -1,0 +1,16 @@
+<#@ template language="C#" debug="True" hostSpecific="True"                       #>
+<#@ output extension=".generated.cs"                                              #>
+<#@ include file="..\Templates\LinqToDB.MySql.Tools.ttinclude" #>
+<#@ include file="..\Templates\PluralizationService.ttinclude" #>
+<#
+
+	NamespaceName = "DbModels.Mysql";
+	GenerateConstructors     = true;
+    GenerateFindExtensions = true;
+	GenerateDataTypes = true;
+    IsCompactColumns = false;
+    BaseDataContextClass = "IEntity";
+    BaseEntityClass = "BaseEntity";
+	LoadMySqlMetadata("localhost","3306", "DBName", "DbUserName", "DbPassword");
+	GenerateModel();
+#>

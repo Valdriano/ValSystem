@@ -1,0 +1,10 @@
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\obj\Debug\ValSystem.SQLite.csprojResolveAssemblyReference.cache
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\ValSystem.SQLite.dll.config
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\ValSystem.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\ValSystem.SQLite.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\EntityFramework.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\EntityFramework.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\obj\Debug\ValSystem.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\obj\Debug\ValSystem.SQLite.pdb

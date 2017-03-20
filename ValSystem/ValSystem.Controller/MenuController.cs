@@ -23,31 +23,25 @@ namespace ValSystem.Controller
             {
                 return Task.Run( () =>
                 {
-                    using ( AppController app = new AppController() )
+                    using ( AppDbContext app = new AppDbContext( "valsystemDb" ) )
                     {
-                        treeNode = new TreeNode[ app.Modulos.Count() + 1 ];
+                        treeNode = new TreeNode[ app.Set<Modulo>().Count() ];
 
-                        treeNode[ 0 ] = new TreeNode( "1 - Configurações do Sistema", 0, 0 );
-                        tnModuloItem = treeNode[ 0 ].Nodes.Add( "10", "10 - Menu", 1, 1 );
-                        tnModuloItem.Tag = treeNode;
-                        tnRotina = tnModuloItem.Nodes.Add( "10", "100 - Carregar Menu", 2, 2 );
-                        tnRotina.Tag = tnRotina;
+                        int iModulos = 0;
 
-                        int iModulos = 1;
-
-                        foreach ( Modulo modulo in app.Modulos.OrderBy( o => o.IdModulo ) )
+                        foreach ( Modulo modulo in app.Set<Modulo>().OrderBy( o => o.IdModulo ) )
                         {
                             iModulos++;
 
                             treeNode[ iModulos - 1 ] = new TreeNode( modulo.IdModulo + " - " + modulo.Descricao.TrimEnd(), 0, 0 );
                             treeNode[ iModulos - 1 ].Tag = modulo;
 
-                            foreach ( ModuloItem moduloItem in app.ModulosItens.Where( w => w.IdModulo == modulo.IdModulo ).OrderBy( o => o.IdModuloItem ) )
+                            foreach ( ModuloItem moduloItem in app.Set<ModuloItem>().Where( w => w.IdModulo == modulo.IdModulo ).OrderBy( o => o.IdModuloItem ) )
                             {
                                 tnModuloItem = treeNode[ iModulos - 1 ].Nodes.Add( moduloItem.IdModulo.ToString(), moduloItem.IdModuloItem + " - " + moduloItem.Descricao.TrimEnd(), 1, 1 );
                                 tnModuloItem.Tag = moduloItem;
 
-                                foreach ( Rotina rotina in app.Rotinas.Where( w => w.IdModulo == modulo.IdModulo && w.IdModuloItem == moduloItem.IdModuloItem ).OrderBy( o => o.IdRotina ) )
+                                foreach ( Rotina rotina in app.Set<Rotina>().Where( w => w.IdModulo == modulo.IdModulo && w.IdModuloItem == moduloItem.IdModuloItem ).OrderBy( o => o.IdRotina ) )
                                 {
                                     tnRotina = tnModuloItem.Nodes.Add( moduloItem.IdModuloItem.ToString(), rotina.IdRotina + " - " + rotina.Descricao.TrimEnd(), 2, 2 );
                                     tnRotina.Tag = rotina;
@@ -83,6 +77,10 @@ namespace ValSystem.Controller
                      Assembly assembly;
                      FileInfo fileInfo;
 
+                     int iModulo = 0;
+                     int iModuloItem = 0;
+                     int iRotina = 0;
+
                      foreach ( string asm in asmList )
                      {
                          fileInfo = new FileInfo( asm );
@@ -93,7 +91,7 @@ namespace ValSystem.Controller
 
                              var classes = AppUtil.ListaClasses( assembly );
 
-                             foreach ( string classe in classes.Where( w => ( w.Contains( "Interfaces.View" ) && ( w.Contains( "ViewerForm" ) ) ) ) )
+                             foreach ( string classe in classes.Where( w => ( w.Contains( "Interfaces.View" ) && ( w.Contains( "ViewerForm" ) || w.Contains( "ToolForm" ) ) ) ) )
                              {
                                  object obj = assembly.CreateInstance( classe );
 
@@ -115,22 +113,38 @@ namespace ValSystem.Controller
                                      _Rotina = frm.Janela_Rotina;
                                      _IdRotinaItem = frm.Janela_RotinaItem;
 
-                                     SalvaMenu( _IdModulo, _Modulo, _IdModuloItem, _ModuloItem, _IdRotina, _Rotina, _IdRotinaItem, classe, fileInfo.Name, ref novoModulo, ref novoModuloItem, ref novaRotina );
+                                     SalvaMenu( Convert.ToInt32( _IdModulo ), _Modulo, Convert.ToInt32( _IdModuloItem ), _ModuloItem, Convert.ToInt32( _IdRotina ), _Rotina, _IdRotinaItem, classe, fileInfo.Name, ref novoModulo, ref novoModuloItem, ref novaRotina );
+
+                                 }
+                                 else if ( obj.GetType().BaseType.Name == "ToolForm" )
+                                 {
+                                     ToolForm frm = obj as ToolForm;
+
+                                     _IdModulo = frm.Janela_IDModulo;
+                                     _Modulo = frm.Janela_Modulo;
+                                     _IdModuloItem = frm.Janela_IDModuloItem;
+                                     _ModuloItem = frm.Janela_ModuloItem;
+                                     _IdRotina = frm.Janela_IDRotina;
+                                     _Rotina = frm.Janela_Rotina;
+                                     _IdRotinaItem = frm.Janela_RotinaItem;
+
+                                     SalvaMenu( Convert.ToInt32( _IdModulo ), _Modulo, Convert.ToInt32( _IdModuloItem ), _ModuloItem, Convert.ToInt32( _IdRotina ), _Rotina, _IdRotinaItem, classe, fileInfo.Name, ref novoModulo, ref novoModuloItem, ref novaRotina );
                                  }
 
+
                                  if ( novoModulo )
-                                     dicionario.Add( "Modulos", 1 );
+                                     dicionario.Add( "Modulos", ++iModulo );
                                  if ( novoModuloItem )
-                                     dicionario.Add( "Modulo Item", 1 );
+                                     dicionario.Add( "Modulo Item", ++iModuloItem );
                                  if ( novaRotina )
-                                     dicionario.Add( "Rotinas", 1 );
+                                     dicionario.Add( "Rotinas", ++iRotina );
                              }
                          }
                      }
 
                      return dicionario;
                  }
-                    );
+                 );
             }
             catch ( Exception ex )
             {
@@ -142,37 +156,41 @@ namespace ValSystem.Controller
             }
         }
 
-        private static void SalvaMenu( string IdModulo, string Modulo, string IdModuloItem, string ModuloItem, string IdRotina, string Rotina, List<string> IdRotinaItem, string NameSpace, string NameAssembly, ref bool novoModulo, ref bool novoModuloItem, ref bool novaRotina )
+        private static void SalvaMenu( int IdModulo, string Modulo, int IdModuloItem, string ModuloItem, int IdRotina, string Rotina, List<string> IdRotinaItem, string NameSpace, string NameAssembly, ref bool novoModulo, ref bool novoModuloItem, ref bool novaRotina )
         {
             try
             {
                 novoModulo = novoModuloItem = novaRotina = false;
 
-                using ( AppController app = new AppController() )
+                using ( AppDbContext app = new AppDbContext( "valsystemDb" ) )
                 {
-                    if ( app.Modulos.Where( w => w.IdModulo == Convert.ToInt16( IdModulo ) ).Count() == 0 )
+                    if ( app.Set<Modulo>().Where( w => w.IdModulo == IdModulo ).Count() == 0 )
                     {
-                        app.Modulos.Add( new Modulo { IdModulo = Convert.ToInt16( IdModulo), Descricao = Modulo } );
+                        app.Set<Modulo>().Add( new Modulo { IdModulo = IdModulo, Descricao = Modulo } );
                         novoModulo = true;
                     }
 
-                    if ( app.ModulosItens.Where( w => w.IdModuloItem == Convert.ToInt32( IdModuloItem ) && w.IdModulo == Convert.ToInt32( IdModulo ) ).Count() == 0 )
+                    if ( app.Set<ModuloItem>().Where( w => w.IdModuloItem == IdModuloItem && w.IdModulo == IdModulo ).Count() == 0 )
                     {
-                        app.ModulosItens.Add( new ModuloItem { IdModulo = Convert.ToInt32( IdModulo ), IdModuloItem = Convert.ToInt32( IdModuloItem ), Descricao = ModuloItem } );
+                        app.Set<ModuloItem>().Add( new ModuloItem { IdModulo = IdModulo, IdModuloItem = IdModuloItem, Descricao = ModuloItem } );
                         novoModuloItem = true;
                     }
 
-                    if ( app.Rotinas.Where( w => w.IdRotina == Convert.ToInt32( IdRotina ) && w.IdModulo == Convert.ToInt32( IdModulo ) && w.IdModuloItem == Convert.ToInt32( IdModuloItem ) ).Count() == 0 )
+                    if ( app.Set<Rotina>().Where( w => w.IdRotina == IdRotina && w.IdModulo == IdModulo && w.IdModuloItem == IdModuloItem ).Count() == 0 )
                     {
-                        app.Rotinas.Add( new Rotina { IdRotina = Convert.ToInt32( IdRotina ), Descricao = Rotina, IdModulo = Convert.ToInt32( IdModulo ), IdModuloItem = Convert.ToInt32( IdModuloItem ), NameSpace = NameSpace, NameAssembly = NameAssembly } );
+                        app.Set<Rotina>().Add( new Rotina { IdRotina = IdRotina, Descricao = Rotina, IdModulo = IdModulo, IdModuloItem = IdModuloItem, NameSpace = NameSpace, NameAssembly = NameAssembly } );
                         novaRotina = true;
                     }
 
                     foreach ( string item in IdRotinaItem )
                     {
-                        if ( app.RotinasItens.Where( w => w.IdRotinaItem == Convert.ToInt32( item.Substring( 0, item.IndexOf( "-" ) ).Trim() ) && w.IdRotina == Convert.ToInt32( IdRotina ) ).Count() == 0 )
+                        int id = Convert.ToInt32( IdRotina );
+                        int idItem = Convert.ToInt32( item.Substring( 0, item.IndexOf( "-" ) ).Trim() );
+                        string descricao = Convert.ToString( item.Substring( item.IndexOf( "-" ) + 1 ).Trim() );
+
+                        if ( app.Set<RotinaItem>().Where( w => w.Item == idItem && w.IdRotina == id ).Count() == 0 )
                         {
-                            app.RotinasItens.Add( new RotinaItem { IdRotina = Convert.ToInt32( IdRotina ), Descricao = item, IdRotinaItem = Convert.ToInt32( item.Substring( 0, item.IndexOf( "-" ) ).Trim() ) } );
+                            app.Set<RotinaItem>().Add( new RotinaItem { IdRotina = id, Descricao = descricao, Item = idItem } );
                         }
                     }
 
@@ -186,18 +204,12 @@ namespace ValSystem.Controller
             }
         }
 
-        public Form CarregarRotina( TreeView treeView )
+        public void CarregarRotina( TreeView treeView, AppForm frmApp )
         {
             try
             {
-
-                Form oForm = null;
-
                 if ( treeView.SelectedNode != null && treeView.SelectedNode.Tag != null )
                 {
-                    if ( treeView.SelectedNode.Text == "100 - Carregar Menu" )
-                        this.CriarMenu();
-
                     Rotina rotina = treeView.SelectedNode.Tag as Rotina;
 
                     if ( rotina != null )
@@ -227,17 +239,21 @@ namespace ValSystem.Controller
 
                             if ( obj.GetType().BaseType.Name == "DataViewerForm" )
                             {
-                                oForm = obj as DataViewerForm;
+                                DataViewerForm DataViewer = obj as DataViewerForm;
+
+                                DataViewer.AppForm = frmApp;
+                                DataViewer.Show();
                             }
-                            else
+                            else if ( obj.GetType().BaseType.Name == "ToolForm" )
                             {
-                                //oForm = null;
+                                ToolForm toolForm = obj as ToolForm;
+
+                                toolForm.AppForm = frmApp;
+                                toolForm.Show();
                             }
                         }
                     }
                 }
-
-                return oForm;
 
             }
             catch ( Exception ex )

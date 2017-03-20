@@ -1,0 +1,32 @@
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\XrmToolBox Plugin1.dll.config
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\XrmToolBox Plugin1.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\XrmToolBox Plugin1.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\McTools.Xrm.Connection.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\McTools.Xrm.Connection.WinForms.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.IdentityModel.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Web.XmlTransform.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Xrm.Sdk.Deployment.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Xrm.Sdk.Workflow.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Xrm.Tooling.Connector.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\XrmToolBox.exe
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\XrmToolBox.Extensibility.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\XrmToolBox.PluginsStore.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Xrm.Sdk.Deployment.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Xrm.Sdk.Workflow.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Microsoft.Xrm.Tooling.Connector.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\obj\Debug\XrmToolBox Plugin1.csprojResolveAssemblyReference.cache
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\obj\Debug\XrmToolBox_Plugin1.MyPluginControl.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\obj\Debug\XrmToolBox Plugin1.csproj.GenerateResource.Cache
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\obj\Debug\XrmToolBox Plugin1.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\XrmToolBox Plugin1\XrmToolBox Plugin1\obj\Debug\XrmToolBox Plugin1.pdb
