@@ -20,7 +20,7 @@ namespace ValSystem.Model
         public int IdModulo { get; set; }
         [MaxLength( 30 ), Required]
         public string Descricao { get; set; }
-
+        //[ForeignKey( "IdModulo" )]
         //public virtual ICollection<Modulo> Modulos { get; set; }
     }
 }

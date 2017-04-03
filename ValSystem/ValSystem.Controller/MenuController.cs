@@ -13,6 +13,16 @@ namespace ValSystem.Controller
 {
     public class MenuController
     {
+        private readonly object locker = new object();
+        public delegate void MenuHandler( object sender, MenuEventArgs e );
+        //public static event MenuHandler MenuEvent;
+        public event MenuHandler MenuEvent;
+
+        public virtual void OnMenu( MenuEventArgs e )
+        {
+            MenuEvent?.Invoke( locker, e );
+        }
+
         public Task<TreeNode[]> CarregarMenuTreeNode( int IdUsuario, int IdPerfil )
         {
             TreeNode[] treeNode;
@@ -64,22 +74,16 @@ namespace ValSystem.Controller
             }
         }
 
-        public Task<Dictionary<string, int>> CriarMenu()
+        public Task CriarMenu()
         {
             try
             {
                 return Task.Run( () =>
                  {
-                     Dictionary<string, int> dicionario = new Dictionary<string, int>();
-
                      var asmList = AppUtil.CarregarAssembly( AppUtil.DiretorioExecutacao );
 
                      Assembly assembly;
                      FileInfo fileInfo;
-
-                     int iModulo = 0;
-                     int iModuloItem = 0;
-                     int iRotina = 0;
 
                      foreach ( string asm in asmList )
                      {
@@ -97,9 +101,6 @@ namespace ValSystem.Controller
 
                                  string _IdModulo, _Modulo, _IdModuloItem, _ModuloItem, _IdRotina, _Rotina;
                                  List<string> _IdRotinaItem;
-                                 bool novoModulo, novoModuloItem, novaRotina;
-
-                                 novoModulo = novoModuloItem = novaRotina = false;
 
                                  if ( obj.GetType().BaseType.Name == "DataViewerForm" )
                                  {
@@ -113,7 +114,7 @@ namespace ValSystem.Controller
                                      _Rotina = frm.Janela_Rotina;
                                      _IdRotinaItem = frm.Janela_RotinaItem;
 
-                                     SalvaMenu( Convert.ToInt32( _IdModulo ), _Modulo, Convert.ToInt32( _IdModuloItem ), _ModuloItem, Convert.ToInt32( _IdRotina ), _Rotina, _IdRotinaItem, classe, fileInfo.Name, ref novoModulo, ref novoModuloItem, ref novaRotina );
+                                     SalvaMenu( Convert.ToInt32( _IdModulo ), _Modulo, Convert.ToInt32( _IdModuloItem ), _ModuloItem, Convert.ToInt32( _IdRotina ), _Rotina, _IdRotinaItem, classe, fileInfo.Name );
 
                                  }
                                  else if ( obj.GetType().BaseType.Name == "ToolForm" )
@@ -128,21 +129,13 @@ namespace ValSystem.Controller
                                      _Rotina = frm.Janela_Rotina;
                                      _IdRotinaItem = frm.Janela_RotinaItem;
 
-                                     SalvaMenu( Convert.ToInt32( _IdModulo ), _Modulo, Convert.ToInt32( _IdModuloItem ), _ModuloItem, Convert.ToInt32( _IdRotina ), _Rotina, _IdRotinaItem, classe, fileInfo.Name, ref novoModulo, ref novoModuloItem, ref novaRotina );
+                                     SalvaMenu( Convert.ToInt32( _IdModulo ), _Modulo, Convert.ToInt32( _IdModuloItem ), _ModuloItem, Convert.ToInt32( _IdRotina ), _Rotina, _IdRotinaItem, classe, fileInfo.Name );
                                  }
 
-
-                                 if ( novoModulo )
-                                     dicionario.Add( "Modulos", ++iModulo );
-                                 if ( novoModuloItem )
-                                     dicionario.Add( "Modulo Item", ++iModuloItem );
-                                 if ( novaRotina )
-                                     dicionario.Add( "Rotinas", ++iRotina );
                              }
                          }
                      }
 
-                     return dicionario;
                  }
                  );
             }
@@ -156,30 +149,31 @@ namespace ValSystem.Controller
             }
         }
 
-        private static void SalvaMenu( int IdModulo, string Modulo, int IdModuloItem, string ModuloItem, int IdRotina, string Rotina, List<string> IdRotinaItem, string NameSpace, string NameAssembly, ref bool novoModulo, ref bool novoModuloItem, ref bool novaRotina )
+        private static void SalvaMenu( int IdModulo, string Modulo, int IdModuloItem, string ModuloItem, int IdRotina, string Rotina, List<string> IdRotinaItem, string NameSpace, string NameAssembly )
         {
             try
             {
-                novoModulo = novoModuloItem = novaRotina = false;
+                MenuController obj = new MenuController();
+                MenuEventArgs evento = new MenuEventArgs();
+
+                evento.Descricao = $"Modulo: {IdModulo} - {Modulo} Sub-Modulo: {IdModuloItem} - {ModuloItem} Rotina: {IdRotina} - {Rotina} Permissões: {IdRotinaItem.Count}";
+                obj.OnMenu( evento );
 
                 using ( AppDbContext app = new AppDbContext( "valsystemDb" ) )
                 {
                     if ( app.Set<Modulo>().Where( w => w.IdModulo == IdModulo ).Count() == 0 )
                     {
                         app.Set<Modulo>().Add( new Modulo { IdModulo = IdModulo, Descricao = Modulo } );
-                        novoModulo = true;
                     }
 
                     if ( app.Set<ModuloItem>().Where( w => w.IdModuloItem == IdModuloItem && w.IdModulo == IdModulo ).Count() == 0 )
                     {
                         app.Set<ModuloItem>().Add( new ModuloItem { IdModulo = IdModulo, IdModuloItem = IdModuloItem, Descricao = ModuloItem } );
-                        novoModuloItem = true;
                     }
 
                     if ( app.Set<Rotina>().Where( w => w.IdRotina == IdRotina && w.IdModulo == IdModulo && w.IdModuloItem == IdModuloItem ).Count() == 0 )
                     {
                         app.Set<Rotina>().Add( new Rotina { IdRotina = IdRotina, Descricao = Rotina, IdModulo = IdModulo, IdModuloItem = IdModuloItem, NameSpace = NameSpace, NameAssembly = NameAssembly } );
-                        novaRotina = true;
                     }
 
                     foreach ( string item in IdRotinaItem )
@@ -262,5 +256,52 @@ namespace ValSystem.Controller
                 throw new Exception( ex.Message );
             }
         }
+
+        public static TreeNode LocalizadorRotinas( string texto )
+        {
+            TreeNode nodes = new TreeNode( "Rotinas encontradas..." );
+
+            int total;
+
+            try
+            {
+                using ( AppDbContext app = new AppDbContext( "valsystemDb" ) )
+                {
+                    List<Rotina> list = app.Set<Rotina>().Where( w => w.Descricao.ToUpper().Trim().Contains( texto.ToUpper().Trim() ) ).ToList();
+
+                    total = list.Count;
+
+                    nodes.Name = "Rotinas encontradas...";
+
+                    foreach ( Rotina rot in list )
+                    {
+                        TreeNode nodes2 = new TreeNode()
+                        {
+                            Name = rot.Descricao.TrimEnd(),
+                            Text = rot.IdRotina + " - " + rot.Descricao.TrimEnd(),
+                            Tag = rot
+                        };
+
+                        nodes.Nodes.Add( nodes2 );
+                    }
+                }
+
+                nodes.Text = $"Total de Rotinas {total}";
+                nodes.Expand();
+
+            }
+            catch ( Exception ex )
+            {
+
+                throw new Exception( ex.Message );
+            }
+
+            return nodes;
+        }
+    }
+
+    public class MenuEventArgs : EventArgs
+    {
+        public string Descricao { get; set; }
     }
 }

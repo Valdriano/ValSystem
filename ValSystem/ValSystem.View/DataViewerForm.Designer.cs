@@ -30,26 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.AdicionartoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.EditartoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ExcluirtoolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ImprimirtoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.LocalizartoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AtualizartoolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.MoveFirsttoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.MoveLasttoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.FechartoolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.ViewerbindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.Quantidadetssl = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Progressotsspb = new System.Windows.Forms.ToolStripProgressBar();
-            this.Porcentagemtssl = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Mensagemtssl = new System.Windows.Forms.ToolStripStatusLabel();
+            this.bindingSourceViewer = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewerbindingSource)).BeginInit();
-            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceViewer)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -73,16 +68,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(391, 39);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "Barra de Menu";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // AdicionartoolStripButton
             // 
@@ -114,6 +99,11 @@
             this.ExcluirtoolStripButton.Text = "Excluir";
             this.ExcluirtoolStripButton.Click += new System.EventHandler(this.ExcluirtoolStripButton_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
             // ImprimirtoolStripButton
             // 
             this.ImprimirtoolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -143,6 +133,11 @@
             this.AtualizartoolStripButton.Size = new System.Drawing.Size(36, 36);
             this.AtualizartoolStripButton.Text = "Atualizar";
             this.AtualizartoolStripButton.Click += new System.EventHandler(this.AtualizartoolStripButton_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // MoveFirsttoolStripButton
             // 
@@ -174,54 +169,21 @@
             this.FechartoolStripButton.Text = "Fechar";
             this.FechartoolStripButton.Click += new System.EventHandler(this.FechartoolStripButton_Click);
             // 
-            // statusStrip1
+            // panel1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Mensagemtssl,
-            this.Quantidadetssl,
-            this.Progressotsspb,
-            this.Porcentagemtssl});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 241);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(391, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // Quantidadetssl
-            // 
-            this.Quantidadetssl.Name = "Quantidadetssl";
-            this.Quantidadetssl.Size = new System.Drawing.Size(81, 17);
-            this.Quantidadetssl.Text = "Quantidade: 0";
-            this.Quantidadetssl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Progressotsspb
-            // 
-            this.Progressotsspb.Name = "Progressotsspb";
-            this.Progressotsspb.Size = new System.Drawing.Size(100, 16);
-            this.Progressotsspb.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            // 
-            // Porcentagemtssl
-            // 
-            this.Porcentagemtssl.Name = "Porcentagemtssl";
-            this.Porcentagemtssl.Size = new System.Drawing.Size(23, 17);
-            this.Porcentagemtssl.Text = "0%";
-            this.Porcentagemtssl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Mensagemtssl
-            // 
-            this.Mensagemtssl.Name = "Mensagemtssl";
-            this.Mensagemtssl.Size = new System.Drawing.Size(170, 17);
-            this.Mensagemtssl.Spring = true;
-            this.Mensagemtssl.Text = "Mensagem";
-            this.Mensagemtssl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(391, 224);
+            this.panel1.TabIndex = 1;
             // 
             // DataViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 263);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.KeyPreview = true;
             this.Name = "DataViewerForm";
@@ -230,9 +192,7 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DataViewerForm_KeyPress);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewerbindingSource)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceViewer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +201,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        public System.Windows.Forms.BindingSource ViewerbindingSource;
+        public System.Windows.Forms.BindingSource bindingSourceViewer;
         private System.Windows.Forms.ToolStripButton AdicionartoolStripButton;
         private System.Windows.Forms.ToolStripButton EditartoolStripButton;
         private System.Windows.Forms.ToolStripButton ExcluirtoolStripButton;
@@ -253,10 +213,6 @@
         private System.Windows.Forms.ToolStripButton MoveFirsttoolStripButton;
         private System.Windows.Forms.ToolStripButton MoveLasttoolStripButton;
         private System.Windows.Forms.ToolStripButton FechartoolStripButton;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel Mensagemtssl;
-        private System.Windows.Forms.ToolStripStatusLabel Quantidadetssl;
-        private System.Windows.Forms.ToolStripProgressBar Progressotsspb;
-        private System.Windows.Forms.ToolStripStatusLabel Porcentagemtssl;
+        public System.Windows.Forms.Panel panel1;
     }
 }

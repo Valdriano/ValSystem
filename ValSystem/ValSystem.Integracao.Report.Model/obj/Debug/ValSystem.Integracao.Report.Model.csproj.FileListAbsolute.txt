@@ -1,0 +1,13 @@
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\ValSystem.Integracao.Report.Model.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\ValSystem.Integracao.Report.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\obj\Debug\ValSystem.Integracao.Report.Model.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\obj\Debug\ValSystem.Integracao.Report.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\ValSystem.Integracao.Report.Model.dll.config
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\EntityFramework.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\System.Data.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\EntityFramework.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Report.Model\bin\Debug\System.Data.SQLite.xml

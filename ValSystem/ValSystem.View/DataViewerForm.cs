@@ -45,7 +45,6 @@ namespace ValSystem.View
         private void DataViewerForm_Shown( object sender, EventArgs e )
         {
             this.ExibirOpcoes();
-            this.ExibirProgresso();
         }
 
         private void AdicionartoolStripButton_Click( object sender, EventArgs e )
@@ -80,12 +79,12 @@ namespace ValSystem.View
 
         private void MoveFirsttoolStripButton_Click( object sender, EventArgs e )
         {
-            this.ViewerbindingSource.MoveFirst();
+            this.bindingSourceViewer.MoveFirst();
         }
 
         private void MoveLasttoolStripButton_Click( object sender, EventArgs e )
         {
-            this.ViewerbindingSource.MoveLast();
+            this.bindingSourceViewer.MoveLast();
         }
 
         private void FechartoolStripButton_Click( object sender, EventArgs e )
@@ -104,12 +103,6 @@ namespace ValSystem.View
             this.MoveFirsttoolStripButton.Visible = movePrimeiro;
             this.MoveLasttoolStripButton.Visible = moveUltimo;
             this.FechartoolStripButton.Visible = fechar;
-        }
-
-        public void ExibirProgresso( bool exibir = false )
-        {
-            this.Progressotsspb.Visible = exibir;
-            this.Porcentagemtssl.Visible = exibir;
         }
 
         public virtual void Incluir( object sender, EventArgs e )

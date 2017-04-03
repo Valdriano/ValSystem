@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ValSystem.SQLite.Public.Attributes;
 
 namespace ValSystem.Model
 {
@@ -11,7 +12,8 @@ namespace ValSystem.Model
             Usuarios = new HashSet<Usuario>();
         }
 
-        [Key, DatabaseGenerated( DatabaseGeneratedOption.Identity )]
+        //[Key, DatabaseGenerated( DatabaseGeneratedOption.Identity )]
+        [Autoincrement]
         public int Id { get; set; }
         [MaxLength( 30 ), Required]
         public string Descricao { get; set; }

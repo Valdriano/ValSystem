@@ -27,3 +27,11 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Vie
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.Model.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.SQLite.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\ValSystem.SQLite.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\System.Data.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\bin\Debug\System.Data.SQLite.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\obj\Debug\ValSystem.Interfaces.View.Properties.Resources.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\obj\Debug\ValSystem.Interfaces.View.UsuarioEditForm.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\obj\Debug\ValSystem.Interfaces.View.PerfilViewerForm.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\obj\Debug\ValSystem.Interfaces.View.PerfilEditForm.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\obj\Debug\ValSystem.Interfaces.View.EmpresaViewerForm.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.View\obj\Debug\ValSystem.Interfaces.View.EmpresaEditForm.resources

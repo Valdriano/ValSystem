@@ -10,3 +10,16 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Con
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\ValSystem.Interfaces.Model.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\ValSystem.Util.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\obj\Debug\ValSystem.Interfaces.Controller.csprojResolveAssemblyReference.cache
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\ValSystem.Interfaces.Controller.dll.config
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\EntityFramework.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\System.Data.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\ValSystem.Model.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\ValSystem.SQLite.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\ValSystem.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\EntityFramework.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\System.Data.SQLite.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Interfaces.Controller\bin\Debug\ValSystem.SQLite.pdb

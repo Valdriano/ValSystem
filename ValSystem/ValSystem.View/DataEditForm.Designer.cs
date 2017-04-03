@@ -32,6 +32,7 @@
             this.GravartoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.LocalizartoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.FechartoolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,12 +80,23 @@
             this.FechartoolStripButton.Text = "Fechar";
             this.FechartoolStripButton.Click += new System.EventHandler(this.FechartoolStripButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(347, 234);
+            this.panel1.TabIndex = 2;
+            // 
             // DataEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 273);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
+            this.KeyPreview = true;
             this.Name = "DataEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DataEditForm";
@@ -103,5 +115,6 @@
         private System.Windows.Forms.ToolStripButton GravartoolStripButton;
         private System.Windows.Forms.ToolStripButton LocalizartoolStripButton;
         private System.Windows.Forms.ToolStripButton FechartoolStripButton;
+        public System.Windows.Forms.Panel panel1;
     }
 }

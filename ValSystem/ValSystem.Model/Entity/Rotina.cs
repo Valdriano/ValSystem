@@ -8,7 +8,7 @@ namespace ValSystem.Model
     {
         public Rotina()
         {
-            RotinasItens = new HashSet<RotinaItem>();
+            //RotinasItens = new HashSet<RotinaItem>();
         }
 
         [Key, DatabaseGenerated( DatabaseGeneratedOption.Identity )]
@@ -26,6 +26,6 @@ namespace ValSystem.Model
         [MaxLength( 60 ), Required]
         public string NameAssembly { get; set; }
 
-        public virtual ICollection<RotinaItem> RotinasItens { get; set; }
+        //public virtual ICollection<RotinaItem> RotinasItens { get; set; }
     }
 }

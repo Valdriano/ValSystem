@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SQLite;
 using System.Threading.Tasks;
 
 namespace ValSystem.Connection
 {
     public class Connections : IConnections
     {
-        public OleDbCommand Cmd( string cmd, params OleDbParameter[] parametros )
+        public OleDbCommand CmdOleDb( string cmd, params OleDbParameter[] parametros )
         {
             OleDbCommand Command = new OleDbCommand();
 
             try
             {
-                using ( OleDbConnection conn = OpenConn() )
+                using ( OleDbConnection conn = OpenOleDbConn() )
                 {
                     Command.Connection = conn;
                     Command.CommandType = CommandType.Text;
@@ -38,13 +39,13 @@ namespace ValSystem.Connection
             }
         }
 
-        public async Task<int> CmdAsync( string cmd, params OleDbParameter[] parametros )
+        public async Task<int> CmdOleDbAsync( string cmd, params OleDbParameter[] parametros )
         {
             OleDbCommand Command = new OleDbCommand();
 
             try
             {
-                using ( OleDbConnection conn = OpenConn() )
+                using ( OleDbConnection conn = OpenOleDbConn() )
                 {
                     Command.Connection = conn;
                     Command.CommandType = CommandType.Text;
@@ -67,13 +68,49 @@ namespace ValSystem.Connection
             }
         }
 
-        public DataSet Dados( string cmd, params OleDbParameter[] parametros )
+        public SQLiteCommand CmdSQLite( string cmd, params SQLiteParameter[] parametros )
+        {
+            SQLiteCommand Command = new SQLiteCommand();
+
+            try
+            {
+                using ( SQLiteConnection conn = OpenSQLiteConn() )
+                {
+                    Command.Connection = conn;
+                    Command.CommandType = CommandType.Text;
+                    Command.CommandText = cmd;
+
+                    foreach ( SQLiteParameter parametro in parametros )
+                        Command.Parameters.Add( parametro );
+
+                    Command.ExecuteNonQuery();
+                }
+
+                return Command;
+            }
+            catch ( Exception ex )
+            {
+
+                throw new Exception( ex.Message );
+            }
+            finally
+            {
+                Command.Dispose();
+            }
+        }
+
+        public static SQLiteConnection ConnSQLite()
+        {
+            return new Connections().OpenSQLiteConn();
+        }
+
+        public DataSet DadosOleDb( string cmd, params OleDbParameter[] parametros )
         {
             DataSet ds = new DataSet();
 
             try
             {
-                using ( OleDbConnection conn = OpenConn() )
+                using ( OleDbConnection conn = OpenOleDbConn() )
                 {
                     OleDbCommand Command = conn.CreateCommand();
 
@@ -105,13 +142,51 @@ namespace ValSystem.Connection
             }
         }
 
-        public int Delete( string cmd, params OleDbParameter[] parametros )
+        public DataSet DadosSQLite( string cmd, params SQLiteParameter[] parametros )
+        {
+            DataSet ds = new DataSet();
+
+            try
+            {
+                using ( SQLiteConnection conn = OpenSQLiteConn() )
+                {
+                    SQLiteCommand Command = conn.CreateCommand();
+
+                    Command.CommandType = CommandType.Text;
+                    Command.CommandText = cmd;
+
+                    foreach ( SQLiteParameter parametro in parametros )
+                        Command.Parameters.Add( parametro );
+
+                    DataTable dt = new DataTable();
+
+                    SQLiteDataReader reader = Command.ExecuteReader();
+
+                    dt.Load( reader );
+
+                    ds.Tables.Add( dt );
+                }
+
+                return ds;
+            }
+            catch ( Exception ex )
+            {
+
+                throw new Exception( ex.Message );
+            }
+            finally
+            {
+                ds.Dispose();
+            }
+        }
+
+        public int DeleteOleDb( string cmd, params OleDbParameter[] parametros )
         {
             OleDbCommand Command = new OleDbCommand();
 
             try
             {
-                using ( OleDbConnection conn = OpenConn() )
+                using ( OleDbConnection conn = OpenOleDbConn() )
                 {
                     Command.Connection = conn;
                     Command.CommandType = CommandType.Text;
@@ -134,13 +209,13 @@ namespace ValSystem.Connection
             }
         }
 
-        public async Task<int> DeleteAsync( string cmd, params OleDbParameter[] parametros )
+        public async Task<int> DeleteOleDbAsync( string cmd, params OleDbParameter[] parametros )
         {
             OleDbCommand Command = new OleDbCommand();
 
             try
             {
-                using ( OleDbConnection conn = OpenConn() )
+                using ( OleDbConnection conn = OpenOleDbConn() )
                 {
                     Command.Connection = conn;
                     Command.CommandType = CommandType.Text;
@@ -163,7 +238,36 @@ namespace ValSystem.Connection
             }
         }
 
-        public OleDbConnection OpenConn()
+        public int DeleteSQLite( string cmd, params SQLiteParameter[] parametros )
+        {
+            SQLiteCommand Command = new SQLiteCommand();
+
+            try
+            {
+                using ( SQLiteConnection conn = OpenSQLiteConn() )
+                {
+                    Command.Connection = conn;
+                    Command.CommandType = CommandType.Text;
+                    Command.CommandText = cmd;
+
+                    foreach ( SQLiteParameter parametro in parametros )
+                        Command.Parameters.Add( parametro );
+
+                    return Command.ExecuteNonQuery();
+                }
+            }
+            catch ( Exception ex )
+            {
+
+                throw new Exception( ex.Message );
+            }
+            finally
+            {
+                Command.Dispose();
+            }
+        }
+
+        public OleDbConnection OpenOleDbConn()
         {
             OleDbConnection conn = new OleDbConnection();
 
@@ -180,9 +284,24 @@ namespace ValSystem.Connection
 
                 throw new Exception( ex.Message );
             }
-            finally
+        }
+
+        public SQLiteConnection OpenSQLiteConn()
+        {
+            SQLiteConnection conn = new SQLiteConnection();
+
+            try
             {
-                conn.Dispose();
+                conn.ConnectionString = @"data source=.\db\DataBase\ValSystemDb.sqlite;foreign keys=true";
+
+                conn.Open();
+
+                return conn;
+            }
+            catch ( Exception ex )
+            {
+
+                throw new Exception( ex.Message );
             }
         }
     }

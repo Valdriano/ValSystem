@@ -26,21 +26,54 @@ namespace ValSystem.View
 
         public void Mensagem_Status( string texto = "" )
         {
-            if ( texto == string.Empty )
+            if ( this.AppstatusStrip.InvokeRequired )
             {
-                this.Statustssl.Text = "";
+                this.AppstatusStrip.Invoke( ( MethodInvoker )delegate
+                   {
+                       if ( texto == string.Empty )
+                       {
+                           this.Statustssl.Text = "";
+                       }
+                       else
+                       {
+                           this.Statustssl.Text = texto;
+                       }
+                   }
+                );
             }
             else
             {
-                this.Statustssl.Text = texto;
+
+                if ( texto == string.Empty )
+                {
+                    this.Statustssl.Text = "";
+                }
+                else
+                {
+                    this.Statustssl.Text = texto;
+                }
             }
 
-            this.Refresh();
+            if ( this.InvokeRequired )
+            {
+                this.Invoke( ( MethodInvoker )delegate
+                   {
+                       this.Refresh();
+                   }
+                );
+            }
+            else
+            {
+                this.Refresh();
+            }
         }
 
         private void AppForm_FormClosing( object sender, FormClosingEventArgs e )
         {
             Application.Exit();
         }
+
+        public virtual void RecarregarMenu( int IdUsuario, int IdPerfil )
+        { }
     }
 }

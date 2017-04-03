@@ -68,10 +68,21 @@
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="AppDbInicializar.cs" />
+    <Compile Include="Entity\ContatoLocaSMS.cs" />
     <Compile Include="Entity\CustomHistory.cs" />
+    <Compile Include="Entity\Empresa.cs" />
+    <Compile Include="Entity\CampanhaItemLocaSMS.cs" />
+    <Compile Include="Entity\CampanhaLocaSMS.cs" />
+    <Compile Include="Entity\Estados.cs" />
     <Compile Include="Entity\Modulo.cs" />
     <Compile Include="Entity\ModuloItem.cs" />
+    <Compile Include="Entity\Pais.cs" />
     <Compile Include="Entity\Perfil.cs" />
+    <Compile Include="Entity\Permissao.cs" />
+    <Compile Include="Entity\PermissaoItem.cs" />
+    <Compile Include="Entity\UF.cs" />
+    <Compile Include="Entity\UsuarioEmpresa.cs" />
+    <Compile Include="Entity\UsuarioLocaSMS.cs" />
     <Compile Include="ModelConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\Rotina.cs" />

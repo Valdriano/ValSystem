@@ -2,12 +2,13 @@
 <xs:schema id="UsuarioDataSet" targetNamespace="http://tempuri.org/UsuarioDataSet.xsd" xmlns:mstns="http://tempuri.org/UsuarioDataSet.xsd" xmlns="http://tempuri.org/UsuarioDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ValSystemDBDev" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Public" Name="ValSystemDBDev (Settings)" PropertyReference="ApplicationSettings.ValSystem.Interfaces.Model.Properties.Settings.GlobalReference.Default.ValSystemDBDev" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ValSystemDbSQLite" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Public" Name="ValSystemDbSQLite (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ValSystem.Interfaces.Model.Properties.Settings.GlobalReference.Default.ValSystemDbSQLite" Provider="System.Data.SQLite.EF6" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuarioTableAdapter" GeneratorDataComponentClassName="UsuarioTableAdapter" Name="Usuario" UserDataComponentName="UsuarioTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Usuario_MDBTableAdapter" GeneratorDataComponentClassName="Usuario_MDBTableAdapter" Name="Usuario_MDB" UserDataComponentName="Usuario_MDBTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ValSystemDBDev (Settings)" DbObjectName="Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -88,7 +89,7 @@ WHERE        (IdUsuario = ?)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ConsultaTableAdapter" GeneratorDataComponentClassName="ConsultaTableAdapter" Name="Consulta" UserDataComponentName="ConsultaTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Consulta_MDBTableAdapter" GeneratorDataComponentClassName="Consulta_MDBTableAdapter" Name="Consulta_MDB" UserDataComponentName="Consulta_MDBTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ValSystemDBDev (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
@@ -110,6 +111,141 @@ FROM            (Usuario U INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuariosTableAdapter" GeneratorDataComponentClassName="UsuariosTableAdapter" Name="Usuarios" UserDataComponentName="UsuariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectName="main.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [main].[sqlite_default_schema].[Usuarios] WHERE (([Id] = @Original_Id) AND ([Descricao] = @Original_Descricao) AND ([Senha] = @Original_Senha) AND ([Bloqueado] = @Original_Bloqueado) AND ([IdPerfil] = @Original_IdPerfil))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Senha" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Bloqueado" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Bloqueado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdPerfil" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IdPerfil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [main].[sqlite_default_schema].[Usuarios] ([Descricao], [Senha], [Bloqueado], [IdPerfil]) VALUES (@Descricao, @Senha, @Bloqueado, @IdPerfil)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Bloqueado" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Bloqueado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdPerfil" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IdPerfil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Id, Descricao, Senha, Bloqueado, IdPerfil
+FROM            Usuarios
+WHERE        (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="main.Usuarios" DataTypeServer="integer(8)" DbType="Int64" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int64" Scale="0" Size="8" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [main].[sqlite_default_schema].[Usuarios] SET [Descricao] = @Descricao, [Senha] = @Senha, [Bloqueado] = @Bloqueado, [IdPerfil] = @IdPerfil WHERE (([Id] = @Original_Id) AND ([Descricao] = @Original_Descricao) AND ([Senha] = @Original_Senha) AND ([Bloqueado] = @Original_Bloqueado) AND ([IdPerfil] = @Original_IdPerfil))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Bloqueado" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Bloqueado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdPerfil" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IdPerfil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Senha" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Bloqueado" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Bloqueado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdPerfil" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IdPerfil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
+              <Mapping SourceColumn="Senha" DataSetColumn="Senha" />
+              <Mapping SourceColumn="Bloqueado" DataSetColumn="Bloqueado" />
+              <Mapping SourceColumn="IdPerfil" DataSetColumn="IdPerfil" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PerfisTableAdapter" GeneratorDataComponentClassName="PerfisTableAdapter" Name="Perfis" UserDataComponentName="PerfisTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectName="main.Perfis" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [main].[sqlite_default_schema].[Perfis] WHERE (([Id] = @Original_Id) AND ([Descricao] = @Original_Descricao))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [main].[sqlite_default_schema].[Perfis] ([Id], [Descricao]) VALUES (@Id, @Descricao)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Id, Descricao
+FROM            Perfis
+WHERE        (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="main.Perfis" DataTypeServer="integer(8)" DbType="Int64" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int64" Scale="0" Size="8" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [main].[sqlite_default_schema].[Perfis] SET [Id] = @Id, [Descricao] = @Descricao WHERE (([Id] = @Original_Id) AND ([Descricao] = @Original_Descricao))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ConsultaTableAdapter" GeneratorDataComponentClassName="ConsultaTableAdapter" Name="Consulta" UserDataComponentName="ConsultaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Usuarios.Id, Usuarios.Descricao, Usuarios.Bloqueado, Usuarios.IdPerfil, Perfis.Descricao AS Perfil
+FROM            Usuarios INNER JOIN
+                         Perfis ON Usuarios.IdPerfil = Perfis.Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
+              <Mapping SourceColumn="Bloqueado" DataSetColumn="Bloqueado" />
+              <Mapping SourceColumn="IdPerfil" DataSetColumn="IdPerfil" />
+              <Mapping SourceColumn="Perfil" DataSetColumn="Perfil" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -118,7 +254,7 @@ FROM            (Usuario U INNER JOIN
   <xs:element name="UsuarioDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="UsuarioDataSet" msprop:Generator_UserDSName="UsuarioDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent" msprop:Generator_RowClassName="UsuarioRow">
+        <xs:element name="Usuario_MDB" msprop:Generator_TableClassName="Usuario_MDBDataTable" msprop:Generator_TableVarName="tableUsuario_MDB" msprop:Generator_RowChangedName="Usuario_MDBRowChanged" msprop:Generator_TablePropName="Usuario_MDB" msprop:Generator_RowDeletingName="Usuario_MDBRowDeleting" msprop:Generator_RowChangingName="Usuario_MDBRowChanging" msprop:Generator_RowEvHandlerName="Usuario_MDBRowChangeEventHandler" msprop:Generator_RowDeletedName="Usuario_MDBRowDeleted" msprop:Generator_RowClassName="Usuario_MDBRow" msprop:Generator_UserTableName="Usuario_MDB" msprop:Generator_RowEvArgName="Usuario_MDBRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdUsuario" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdUsuario" msprop:Generator_ColumnPropNameInRow="IdUsuario" msprop:Generator_ColumnPropNameInTable="IdUsuarioColumn" msprop:Generator_UserColumnName="IdUsuario" type="xs:int" />
@@ -141,7 +277,7 @@ FROM            (Usuario U INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Consulta" msprop:Generator_TableClassName="ConsultaDataTable" msprop:Generator_TableVarName="tableConsulta" msprop:Generator_TablePropName="Consulta" msprop:Generator_RowDeletingName="ConsultaRowDeleting" msprop:Generator_RowChangingName="ConsultaRowChanging" msprop:Generator_RowEvHandlerName="ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultaRowDeleted" msprop:Generator_UserTableName="Consulta" msprop:Generator_RowChangedName="ConsultaRowChanged" msprop:Generator_RowEvArgName="ConsultaRowChangeEvent" msprop:Generator_RowClassName="ConsultaRow">
+        <xs:element name="Consulta_MDB" msprop:Generator_TableClassName="Consulta_MDBDataTable" msprop:Generator_TableVarName="tableConsulta_MDB" msprop:Generator_RowChangedName="Consulta_MDBRowChanged" msprop:Generator_TablePropName="Consulta_MDB" msprop:Generator_RowDeletingName="Consulta_MDBRowDeleting" msprop:Generator_RowChangingName="Consulta_MDBRowChanging" msprop:Generator_RowEvHandlerName="Consulta_MDBRowChangeEventHandler" msprop:Generator_RowDeletedName="Consulta_MDBRowDeleted" msprop:Generator_RowClassName="Consulta_MDBRow" msprop:Generator_UserTableName="Consulta_MDB" msprop:Generator_RowEvArgName="Consulta_MDBRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdUsuario" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdUsuario" msprop:Generator_ColumnPropNameInRow="IdUsuario" msprop:Generator_ColumnPropNameInTable="IdUsuarioColumn" msprop:Generator_UserColumnName="IdUsuario" type="xs:int" minOccurs="0" />
@@ -164,11 +300,79 @@ FROM            (Usuario U INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_RowClassName="UsuariosRow" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Senha" msprop:Generator_ColumnVarNameInTable="columnSenha" msprop:Generator_ColumnPropNameInRow="Senha" msprop:Generator_ColumnPropNameInTable="SenhaColumn" msprop:Generator_UserColumnName="Senha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bloqueado" msprop:Generator_ColumnVarNameInTable="columnBloqueado" msprop:Generator_ColumnPropNameInRow="Bloqueado" msprop:Generator_ColumnPropNameInTable="BloqueadoColumn" msprop:Generator_UserColumnName="Bloqueado" type="xs:boolean" />
+              <xs:element name="IdPerfil" msprop:Generator_ColumnVarNameInTable="columnIdPerfil" msprop:Generator_ColumnPropNameInRow="IdPerfil" msprop:Generator_ColumnPropNameInTable="IdPerfilColumn" msprop:Generator_UserColumnName="IdPerfil" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Perfis" msprop:Generator_TableClassName="PerfisDataTable" msprop:Generator_TableVarName="tablePerfis" msprop:Generator_RowChangedName="PerfisRowChanged" msprop:Generator_TablePropName="Perfis" msprop:Generator_RowDeletingName="PerfisRowDeleting" msprop:Generator_RowChangingName="PerfisRowChanging" msprop:Generator_RowEvHandlerName="PerfisRowChangeEventHandler" msprop:Generator_RowDeletedName="PerfisRowDeleted" msprop:Generator_RowClassName="PerfisRow" msprop:Generator_UserTableName="Perfis" msprop:Generator_RowEvArgName="PerfisRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Consulta" msprop:Generator_TableClassName="ConsultaDataTable" msprop:Generator_TableVarName="tableConsulta" msprop:Generator_RowChangedName="ConsultaRowChanged" msprop:Generator_TablePropName="Consulta" msprop:Generator_RowDeletingName="ConsultaRowDeleting" msprop:Generator_RowChangingName="ConsultaRowChanging" msprop:Generator_RowEvHandlerName="ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultaRowDeleted" msprop:Generator_RowClassName="ConsultaRow" msprop:Generator_UserTableName="Consulta" msprop:Generator_RowEvArgName="ConsultaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bloqueado" msprop:Generator_ColumnVarNameInTable="columnBloqueado" msprop:Generator_ColumnPropNameInRow="Bloqueado" msprop:Generator_ColumnPropNameInTable="BloqueadoColumn" msprop:Generator_UserColumnName="Bloqueado" type="xs:boolean" />
+              <xs:element name="IdPerfil" msprop:Generator_ColumnVarNameInTable="columnIdPerfil" msprop:Generator_ColumnPropNameInRow="IdPerfil" msprop:Generator_ColumnPropNameInTable="IdPerfilColumn" msprop:Generator_UserColumnName="IdPerfil" type="xs:int" />
+              <xs:element name="Perfil" msprop:Generator_ColumnVarNameInTable="columnPerfil" msprop:Generator_ColumnPropNameInRow="Perfil" msprop:Generator_ColumnPropNameInTable="PerfilColumn" msprop:Generator_UserColumnName="Perfil">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Usuario" />
+      <xs:selector xpath=".//mstns:Usuario_MDB" />
       <xs:field xpath="mstns:IdUsuario" />
+    </xs:unique>
+    <xs:unique name="Usuarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Usuarios" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Perfis_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Perfis" />
+      <xs:field xpath="mstns:Id" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,20 +42,82 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmpresaDataSet.cs">
+      <DependentUpon>EmpresaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpresaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilDataSet.cs">
+      <DependentUpon>PerfilDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PerfilDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PermissaoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PermissaoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioDataSet.cs">
+      <DependentUpon>UsuarioDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UsuarioDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioEmpresaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsuarioEmpresaDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="EmpresaDataSet.xsc">
+      <DependentUpon>EmpresaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmpresaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpresaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EmpresaDataSet.xss">
+      <DependentUpon>EmpresaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PerfilDataSet.xsc">
+      <DependentUpon>PerfilDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PerfilDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PerfilDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PerfilDataSet.xss">
+      <DependentUpon>PerfilDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PermissaoDataSet.xsc">
+      <DependentUpon>PermissaoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PermissaoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PermissaoDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PermissaoDataSet.xss">
+      <DependentUpon>PermissaoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -68,6 +132,17 @@
     </None>
     <None Include="UsuarioDataSet.xss">
       <DependentUpon>UsuarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UsuarioEmpresaDataSet.xsc">
+      <DependentUpon>UsuarioEmpresaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UsuarioEmpresaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsuarioEmpresaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UsuarioEmpresaDataSet.xss">
+      <DependentUpon>UsuarioEmpresaDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

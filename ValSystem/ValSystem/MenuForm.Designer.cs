@@ -37,6 +37,12 @@
             this.MenutreeView = new System.Windows.Forms.TreeView();
             this.FavoritotreeView = new System.Windows.Forms.TreeView();
             this.splitter2 = new System.Windows.Forms.Splitter();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDoSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reiniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AppmenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AppsplitContainer)).BeginInit();
             this.AppsplitContainer.Panel1.SuspendLayout();
@@ -46,9 +52,13 @@
             // 
             // AppmenuStrip
             // 
+            this.AppmenuStrip.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.AppmenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Pesquisatstb,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.editarToolStripMenuItem,
+            this.ferramentasToolStripMenuItem,
+            this.ajudaToolStripMenuItem});
             this.AppmenuStrip.Location = new System.Drawing.Point(0, 0);
             this.AppmenuStrip.Name = "AppmenuStrip";
             this.AppmenuStrip.Size = new System.Drawing.Size(698, 27);
@@ -63,10 +73,12 @@
             this.Pesquisatstb.Size = new System.Drawing.Size(230, 23);
             this.Pesquisatstb.Enter += new System.EventHandler(this.Pesquisatstb_Enter);
             this.Pesquisatstb.Leave += new System.EventHandler(this.Pesquisatstb_Leave);
+            this.Pesquisatstb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pesquisatstb_KeyPress);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reiniciarToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(48, 23);
@@ -111,6 +123,7 @@
             // 
             // MenutreeView
             // 
+            this.MenutreeView.BackColor = System.Drawing.SystemColors.Info;
             this.MenutreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MenutreeView.Location = new System.Drawing.Point(0, 0);
             this.MenutreeView.Name = "MenutreeView";
@@ -121,6 +134,7 @@
             // 
             // FavoritotreeView
             // 
+            this.FavoritotreeView.BackColor = System.Drawing.SystemColors.Info;
             this.FavoritotreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FavoritotreeView.Location = new System.Drawing.Point(0, 0);
             this.FavoritotreeView.Name = "FavoritotreeView";
@@ -137,6 +151,48 @@
             this.splitter2.TabStop = false;
             this.splitter2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter2_SplitterMoved);
             // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
+            this.editarToolStripMenuItem.Text = "Editar";
+            // 
+            // ferramentasToolStripMenuItem
+            // 
+            this.ferramentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuDoSistemaToolStripMenuItem});
+            this.ferramentasToolStripMenuItem.Name = "ferramentasToolStripMenuItem";
+            this.ferramentasToolStripMenuItem.Size = new System.Drawing.Size(84, 23);
+            this.ferramentasToolStripMenuItem.Text = "Ferramentas";
+            // 
+            // menuDoSistemaToolStripMenuItem
+            // 
+            this.menuDoSistemaToolStripMenuItem.Name = "menuDoSistemaToolStripMenuItem";
+            this.menuDoSistemaToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.menuDoSistemaToolStripMenuItem.Text = "Menu do Sistema";
+            this.menuDoSistemaToolStripMenuItem.Click += new System.EventHandler(this.menuDoSistemaToolStripMenuItem_Click);
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sobreToolStripMenuItem});
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(55, 23);
+            this.ajudaToolStripMenuItem.Text = "Ajuda?";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // reiniciarToolStripMenuItem
+            // 
+            this.reiniciarToolStripMenuItem.Name = "reiniciarToolStripMenuItem";
+            this.reiniciarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reiniciarToolStripMenuItem.Text = "Reiniciar";
+            this.reiniciarToolStripMenuItem.Click += new System.EventHandler(this.reiniciarToolStripMenuItem_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +204,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.MainMenuStrip = this.AppmenuStrip;
             this.Name = "MenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.Text = "ValSystem";
             this.Load += new System.EventHandler(this.MenuForm_Load);
             this.Controls.SetChildIndex(this.AppmenuStrip, 0);
@@ -176,5 +233,11 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.TreeView MenutreeView;
         private System.Windows.Forms.TreeView FavoritotreeView;
+        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ferramentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuDoSistemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reiniciarToolStripMenuItem;
     }
 }

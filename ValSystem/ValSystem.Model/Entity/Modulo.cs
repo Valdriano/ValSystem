@@ -9,7 +9,7 @@ namespace ValSystem.Model
     {
         public Modulo()
         {
-            ModulosItens = new HashSet<ModuloItem>();
+            //ModulosItens = new HashSet<ModuloItem>();
         }
 
         [Key, DatabaseGenerated( DatabaseGeneratedOption.Identity )]
@@ -19,7 +19,7 @@ namespace ValSystem.Model
         [MaxLength( 30 ), Required]
         public string Descricao { get; set; }
 
-        public virtual ICollection<ModuloItem> ModulosItens { get; set; }
+        //public virtual ICollection<ModuloItem> ModulosItens { get; set; }
 
     }
 }

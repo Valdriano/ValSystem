@@ -24,6 +24,10 @@ namespace ValSystem.Interfaces.View
             this.Janela_RotinaItem = new List<string>();
 
             this.Janela_RotinaItem.Add( "1 - Executar" );
+
+            MenuController obj = new MenuController();
+            obj.MenuEvent += ( s, e ) => { this.frmApp.Mensagem_Status( e.Descricao ); };
+            //MenuController.MenuEvent += ( s, e ) => { this.frmApp.Mensagem_Status( e.Descricao ); };
         }
 
         public override async void Executar( object sender, EventArgs e )
@@ -36,18 +40,19 @@ namespace ValSystem.Interfaces.View
 
                 if ( this.AtualizarMenuradioButton.Checked )
                 {
-                    Dictionary<string, int> dicionario = await new MenuController().CriarMenu();
+                    this.BloquearMenu( true );
 
-                    if ( dicionario.Count > 0 )
-                    {
-                        MessageBox.Show( "Menu Atualizado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information );
+                    //await new MenuController().CriarMenu();
 
-                        Application.Restart();
-                    }
-                    else
-                    {
-                        MessageBox.Show( "Menu Atualizado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information );
-                    }
+                    MenuController obj = new MenuController();
+
+                    //obj.MenuEvent += ( s, t ) => { this.frmApp.Mensagem_Status( t.Descricao ); };
+                    await obj.CriarMenu();
+
+                    MessageBox.Show( "Menu Atualizado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information );
+
+                    this.frmApp.RecarregarMenu( 1, 1 );
+
                 }
             }
             catch ( ArgumentException ex )
@@ -59,7 +64,11 @@ namespace ValSystem.Interfaces.View
 
                 MessageBox.Show( this, $"Erro\n\n{ex.Message}", "Mensagem de Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button3 );
             }
-
+            finally
+            {
+                this.BloquearMenu( false );
+                this.frmApp.Mensagem_Status();
+            }
         }
     }
 }

@@ -1,4 +1,3 @@
-C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\obj\Debug\ValSystem.SQLite.csprojResolveAssemblyReference.cache
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\ValSystem.SQLite.dll.config
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\ValSystem.SQLite.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.SQLite\bin\Debug\ValSystem.SQLite.pdb

@@ -1,0 +1,4 @@
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Report.View\bin\Debug\ValSystem.Report.View.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Report.View\bin\Debug\ValSystem.Report.View.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Report.View\obj\Debug\ValSystem.Report.View.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Report.View\obj\Debug\ValSystem.Report.View.pdb

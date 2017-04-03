@@ -67,7 +67,9 @@ namespace ValSystem.View
         { }
 
         public virtual void Fechar( object sender, EventArgs e )
-        { }
+        {
+            this.Close();
+        }
 
         public virtual void RecortarRegistro()
         {

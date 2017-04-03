@@ -33,5 +33,16 @@ namespace ValSystem.Interfaces.Model.Properties {
                 return ((string)(this["ValSystemDBDev"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\VALDRIANO\\Documents\\GitHub\\ValSystem\\ValSystem\\ValSystem\\bin" +
+            "\\Debug\\db\\DataBase\\ValSystemDb.sqlite")]
+        public string ValSystemDbSQLite {
+            get {
+                return ((string)(this["ValSystemDbSQLite"]));
+            }
+        }
     }
 }

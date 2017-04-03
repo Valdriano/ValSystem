@@ -1,0 +1,4 @@
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.View\bin\Debug\ValSystem.Integracao.View.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.View\bin\Debug\ValSystem.Integracao.View.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.View\obj\Debug\ValSystem.Integracao.View.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.View\obj\Debug\ValSystem.Integracao.View.pdb

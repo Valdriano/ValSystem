@@ -4,8 +4,8 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.csproj.GenerateResource.Cache
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.pdb
-C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.csprojResolveAssemblyReference.cache
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.DataViewerForm.resources
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.Properties.Resources.resources
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.DataEditForm.resources
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.ToolForm.resources
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.View\obj\Debug\ValSystem.View.csprojResolveAssemblyReference.cache

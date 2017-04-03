@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ValSystem.SQLite.Public.Attributes;
 
 namespace ValSystem.Model
 {
@@ -11,7 +12,8 @@ namespace ValSystem.Model
             //Perfis = new HashSet<Perfil>();
         }
 
-        [Key]
+        //[Key, DatabaseGenerated( DatabaseGeneratedOption.Identity )]
+        [Autoincrement]
         public int Id { get; set; }
         [MaxLength( 30 ), Required]
         public string Descricao { get; set; }
@@ -21,9 +23,6 @@ namespace ValSystem.Model
         public bool Bloqueado { get; set; }
         [Required]
         public int IdPerfil { get; set; }
-        [NotMapped]
-        public byte[] RowVersion { get; set; }
-
 
 
         //public virtual ICollection<Perfil> Perfis { get; set; }

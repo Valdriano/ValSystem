@@ -60,6 +60,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuToolForm";
+            this.Text = "Menu do Sistema";
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
