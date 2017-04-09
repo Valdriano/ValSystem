@@ -39,6 +39,8 @@ namespace ValSystem.Model
             ConfigureContatoLocaSMSEntity( modelBuilder );
             ConfigureCampanhaLocaSMSEntity( modelBuilder );
             ConfigureCampanhaItemLocaSMSEntity( modelBuilder );
+            ConfigureSeq_CampanhaLocaSMSEntity( modelBuilder );
+            ConfigureSeq_ContatoLocaSMSEntity( modelBuilder );
 
             #endregion
         }
@@ -145,11 +147,24 @@ namespace ValSystem.Model
         private static void ConfigureCampanhaLocaSMSEntity( DbModelBuilder modelBuilder )
         {
             modelBuilder.Entity<CampanhaLocaSMS>().ToTable( "Base.CampanhaLocaSMS" );
+            //.HasKey( k => k.Id )
+            //.Property( p => p.Id )
+            //.HasDatabaseGeneratedOption( System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity );
         }
 
         private static void ConfigureCampanhaItemLocaSMSEntity( DbModelBuilder modelBuilder )
         {
             modelBuilder.Entity<CampanhaItemLocaSMS>().ToTable( "Base.CampanhaItemLocaSMS" );
+        }
+
+        private static void ConfigureSeq_CampanhaLocaSMSEntity( DbModelBuilder modelBuilder )
+        {
+            modelBuilder.Entity<Seq_CampanhaLocaSMS>().ToTable( "Base.Seq_CampanhaLocaSMS" );
+        }
+
+        private static void ConfigureSeq_ContatoLocaSMSEntity( DbModelBuilder modelBuilder )
+        {
+            modelBuilder.Entity<Seq_ContatoLocaSMS>().ToTable( "Base.Seq_ContatoLocaSMS" );
         }
 
         #endregion

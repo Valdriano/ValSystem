@@ -13,12 +13,12 @@ namespace ValSystem.Model.Entity
     {
         public CampanhaLocaSMS()
         {
-            UsuariosLocaSMS = new HashSet<UsuarioLocaSMS>();
+            //UsuariosLocaSMS = new HashSet<UsuarioLocaSMS>();
             CampanhaItensLocaSMS = new HashSet<CampanhaItemLocaSMS>();
         }
 
-        [Autoincrement]
-        public int Id { get; set; }
+        [Key]
+        public decimal Id { get; set; }
         [Required]
         public int IdUsuarioLocaSMS { get; set; }
         [Required, MaxLength( 50 )]
@@ -33,9 +33,11 @@ namespace ValSystem.Model.Entity
         public DateTime? DataUltConsulta { get; set; }
         [MaxLength( 255 )]
         public string retornoLocaSMS { get; set; }
+        [MaxLength( 100 )]
+        public string CodigoRetorno { get; set; }
 
-        public virtual HashSet<UsuarioLocaSMS> UsuariosLocaSMS { get; set; }
+        //public virtual HashSet<UsuarioLocaSMS> UsuariosLocaSMS { get; set; }
         [ForeignKey( "IdCampanhaLocaSMS" )]
-        public virtual HashSet<CampanhaItemLocaSMS> CampanhaItensLocaSMS { get; set; }
+        public virtual ICollection<CampanhaItemLocaSMS> CampanhaItensLocaSMS { get; set; }
     }
 }

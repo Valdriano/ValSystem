@@ -80,6 +80,8 @@
     <Compile Include="Entity\Perfil.cs" />
     <Compile Include="Entity\Permissao.cs" />
     <Compile Include="Entity\PermissaoItem.cs" />
+    <Compile Include="Entity\Seq_ContatoLocaSMS.cs" />
+    <Compile Include="Entity\Seq_CampanhaLocaSMS.cs" />
     <Compile Include="Entity\UF.cs" />
     <Compile Include="Entity\UsuarioEmpresa.cs" />
     <Compile Include="Entity\UsuarioLocaSMS.cs" />

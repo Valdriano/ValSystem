@@ -2,3 +2,8 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\bin\D
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\bin\Debug\ValSystem.Controls.pdb
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\obj\Debug\ValSystem.Controls.dll
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\obj\Debug\ValSystem.Controls.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\bin\Debug\AdvancedDataGridView.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\bin\Debug\AdvancedDataGridView.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\bin\Debug\fr\AdvancedDataGridView.resources.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\bin\Debug\ru\AdvancedDataGridView.resources.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Controls\obj\Debug\ValSystem.Controls.csprojResolveAssemblyReference.cache

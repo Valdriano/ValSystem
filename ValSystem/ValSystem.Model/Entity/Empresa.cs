@@ -59,6 +59,6 @@ namespace ValSystem.Model.Entity
         public int? IdUsuarioAlteracao { get; set; }
 
         [ForeignKey( "IdEmpresa" )]
-        public virtual HashSet<UsuarioEmpresa> UsuariosEmpresas { get; set; }
+        public virtual ICollection<UsuarioEmpresa> UsuariosEmpresas { get; set; }
     }
 }

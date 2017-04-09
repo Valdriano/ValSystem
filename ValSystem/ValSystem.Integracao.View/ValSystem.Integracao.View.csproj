@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>fb9b7469-3577-47a9-9056-48435599df73</ProjectGuid>
+    <ProjectGuid>{FB9B7469-3577-47A9-9056-48435599DF73}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ValSystem.Integracao.View</RootNamespace>
@@ -30,24 +30,125 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="AdvancedDataGridView">
+      <HintPath>..\packages\ADGV.0.1.0.10\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.104.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CampanhaLocaSMSEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CampanhaLocaSMSEditForm.Designer.cs">
+      <DependentUpon>CampanhaLocaSMSEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CampanhaLocaSMSViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CampanhaLocaSMSViewerForm.Designer.cs">
+      <DependentUpon>CampanhaLocaSMSViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContatoLocaSMSEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContatoLocaSMSEditForm.Designer.cs">
+      <DependentUpon>ContatoLocaSMSEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContatoLocaSMSImportarToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContatoLocaSMSImportarToolForm.Designer.cs">
+      <DependentUpon>ContatoLocaSMSImportarToolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContatoLocaSMSViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContatoLocaSMSViewerForm.Designer.cs">
+      <DependentUpon>ContatoLocaSMSViewerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioLocaSMSEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioLocaSMSEditForm.Designer.cs">
+      <DependentUpon>UsuarioLocaSMSEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioLocaSMSViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioLocaSMSViewerForm.Designer.cs">
+      <DependentUpon>UsuarioLocaSMSViewerForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ValSystem.Controls\ValSystem.Controls.csproj">
+      <Project>{1BD7C3E8-1310-42EF-9F83-E4ED24E71206}</Project>
+      <Name>ValSystem.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Integracao.Controller\ValSystem.Integracao.Controller.csproj">
+      <Project>{22A75302-FCB0-4655-B087-2B904CF1654C}</Project>
+      <Name>ValSystem.Integracao.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Integracao.Model\ValSystem.Integracao.Model.csproj">
+      <Project>{6A161488-E529-4F62-B685-7DD12744E3E8}</Project>
+      <Name>ValSystem.Integracao.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Util\ValSystem.Util.csproj">
+      <Project>{59736916-C80E-4C05-9416-9C9ED03E38AF}</Project>
+      <Name>ValSystem.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.View\ValSystem.View.csproj">
+      <Project>{44E9C0B2-9729-47B7-8B32-0F61D7448A57}</Project>
+      <Name>ValSystem.View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CampanhaLocaSMSEditForm.resx">
+      <DependentUpon>CampanhaLocaSMSEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CampanhaLocaSMSViewerForm.resx">
+      <DependentUpon>CampanhaLocaSMSViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContatoLocaSMSEditForm.resx">
+      <DependentUpon>ContatoLocaSMSEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContatoLocaSMSImportarToolForm.resx">
+      <DependentUpon>ContatoLocaSMSImportarToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContatoLocaSMSViewerForm.resx">
+      <DependentUpon>ContatoLocaSMSViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioLocaSMSEditForm.resx">
+      <DependentUpon>UsuarioLocaSMSEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioLocaSMSViewerForm.resx">
+      <DependentUpon>UsuarioLocaSMSViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_explore.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +158,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>

@@ -11,3 +11,11 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Con
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\EntityFramework.xml
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\System.Data.SQLite.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\ValSystemDB.mdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\ValSystem.Connection.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\ValSystem.Integracao.Model.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\ValSystem.Connection.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\ValSystem.Integracao.Model.pdb
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\obj\Debug\ValSystem.Integracao.Controller.csprojResolveAssemblyReference.cache
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\ValSystem.Util.dll
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Controller\bin\Debug\ValSystem.Util.pdb

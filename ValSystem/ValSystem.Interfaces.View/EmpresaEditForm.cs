@@ -52,6 +52,8 @@ namespace ValSystem.Interfaces.View
                 this.ComplementotextBox.Text = this.drEmpresa.Complemento;
                 this.EmailtextBox.Text = this.drEmpresa.Email;
                 this.WebSitetextBox.Text = this.drEmpresa.WebSite;
+
+                this.drEmpresa.BeginEdit();
             }
 
             this.RazaoSocialtextBox.Focus();

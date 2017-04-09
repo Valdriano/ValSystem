@@ -89,13 +89,14 @@ namespace ValSystem.Controller
                      {
                          fileInfo = new FileInfo( asm );
 
-                         if ( fileInfo.Name.Contains( "Interfaces.View" ) )
+                         if ( fileInfo.Name.Contains( "Interfaces.View" ) || fileInfo.Name.Contains( "Integracao.View" ) )
                          {
                              assembly = Assembly.LoadFrom( AppUtil.DiretorioExecutacao + @"\" + fileInfo.Name );
 
                              var classes = AppUtil.ListaClasses( assembly );
 
-                             foreach ( string classe in classes.Where( w => ( w.Contains( "Interfaces.View" ) && ( w.Contains( "ViewerForm" ) || w.Contains( "ToolForm" ) ) ) ) )
+                             foreach ( string classe in classes.Where( w => ( w.Contains( "Interfaces.View" ) && ( w.Contains( "ViewerForm" ) || w.Contains( "ToolForm" ) ) ) ||
+                             ( w.Contains( "Integracao.View" ) && ( w.Contains( "ViewerForm" ) || w.Contains( "ToolForm" ) ) ) ) )
                              {
                                  object obj = assembly.CreateInstance( classe );
 

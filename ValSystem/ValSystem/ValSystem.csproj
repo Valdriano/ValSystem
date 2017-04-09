@@ -145,6 +145,30 @@
       <Project>{1bd7c3e8-1310-42ef-9f83-e4ed24e71206}</Project>
       <Name>ValSystem.Controls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Integracao.Controller\ValSystem.Integracao.Controller.csproj">
+      <Project>{22a75302-fcb0-4655-b087-2b904cf1654c}</Project>
+      <Name>ValSystem.Integracao.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Integracao.Model\ValSystem.Integracao.Model.csproj">
+      <Project>{6a161488-e529-4f62-b685-7dd12744e3e8}</Project>
+      <Name>ValSystem.Integracao.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Integracao.Report.Controller\ValSystem.Integracao.Report.Controller.csproj">
+      <Project>{69aeacb6-36a4-4066-94e7-1d3e0984dc8b}</Project>
+      <Name>ValSystem.Integracao.Report.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Integracao.Report.Model\ValSystem.Integracao.Report.Model.csproj">
+      <Project>{e476d0bd-59fd-40e8-aa39-e209c3cce65f}</Project>
+      <Name>ValSystem.Integracao.Report.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Integracao.Report.View\ValSystem.Integracao.Report.View.csproj">
+      <Project>{fb100423-5d55-4d4a-82f5-2dfe47b545e8}</Project>
+      <Name>ValSystem.Integracao.Report.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Integracao.View\ValSystem.Integracao.View.csproj">
+      <Project>{fb9b7469-3577-47a9-9056-48435599df73}</Project>
+      <Name>ValSystem.Integracao.View</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ValSystem.Interfaces.Controller\ValSystem.Interfaces.Controller.csproj">
       <Project>{58c9d2f4-2e3b-409d-a7f4-743d1f0a9946}</Project>
       <Name>ValSystem.Interfaces.Controller</Name>
@@ -160,6 +184,22 @@
     <ProjectReference Include="..\ValSystem.Model\ValSystem.Model.csproj">
       <Project>{f1fe3d50-e479-41af-b3cc-31f0bf8f3913}</Project>
       <Name>ValSystem.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Report.Controller\ValSystem.Report.Controller.csproj">
+      <Project>{fcee9ac0-ffbd-4a3e-9aaa-723d591f3170}</Project>
+      <Name>ValSystem.Report.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Report.Model\ValSystem.Report.Model.csproj">
+      <Project>{a18bcf22-e0ba-4d77-83b2-4e2e40cfd9ca}</Project>
+      <Name>ValSystem.Report.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.Report.View\ValSystem.Report.View.csproj">
+      <Project>{ce6b9426-5fd0-445f-a0bd-88a0aa93f753}</Project>
+      <Name>ValSystem.Report.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValSystem.SQLite\ValSystem.SQLite.csproj">
+      <Project>{4a48b9c5-2fc5-4d42-9872-7f2a14202ec4}</Project>
+      <Name>ValSystem.SQLite</Name>
     </ProjectReference>
     <ProjectReference Include="..\ValSystem.Util\ValSystem.Util.csproj">
       <Project>{59736916-c80e-4c05-9416-9c9ed03e38af}</Project>

@@ -1,0 +1,1123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CampanhaLocaSMSDataSet" targetNamespace="http://tempuri.org/CampanhaLocaSMSDataSet.xsd" xmlns:mstns="http://tempuri.org/CampanhaLocaSMSDataSet.xsd" xmlns="http://tempuri.org/CampanhaLocaSMSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ValSystemDbSQLite" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Public" Name="ValSystemDbSQLite (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ValSystem.Integracao.Model.Properties.Settings.GlobalReference.Default.ValSystemDbSQLite" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ConsultaItemTableAdapter" GeneratorDataComponentClassName="ConsultaItemTableAdapter" Name="ConsultaItem" UserDataComponentName="ConsultaItemTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ContatosLocaSMS.Id, 
+              ContatosLocaSMS.Nome, 
+              ContatosLocaSMS.Celular1, 
+              ContatosLocaSMS.Celular2, 
+              ContatosLocaSMS.Celular3, 
+              ContatosLocaSMS.Celular4, 
+              ContatosLocaSMS.QtdEnvioCel1, 
+              ContatosLocaSMS.QtdEnvioCel2, 
+              ContatosLocaSMS.QtdEnvioCel3, 
+              ContatosLocaSMS.QtdEnvioCel4, 
+              ContatosLocaSMS.retornoCel1, 
+              ContatosLocaSMS.retornoCel2, 
+              ContatosLocaSMS.retornoCel3, 
+              ContatosLocaSMS.retornoCel4, 
+              CampanhaItemLocaSMS.IdContatoLocaSMS, 
+              CampanhaItemLocaSMS.Destino, 
+              CampanhaItemLocaSMS.Operadora, 
+              CampanhaItemLocaSMS.Data, 
+              CampanhaItemLocaSMS.DataEnvio, 
+              CampanhaItemLocaSMS.retornoLocaSMS, 
+              CampanhaItemLocaSMS.CodigoRef, 
+              CampanhaItemLocaSMS.CodigoLocaSMS
+FROM ContatosLocaSMS 
+LEFT JOIN CampanhaItemLocaSMS ON ContatosLocaSMS.Id = CampanhaItemLocaSMS.IdContatoLocaSMS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
+              <Mapping SourceColumn="Celular1" DataSetColumn="Celular1" />
+              <Mapping SourceColumn="Celular2" DataSetColumn="Celular2" />
+              <Mapping SourceColumn="Celular3" DataSetColumn="Celular3" />
+              <Mapping SourceColumn="Celular4" DataSetColumn="Celular4" />
+              <Mapping SourceColumn="QtdEnvioCel1" DataSetColumn="QtdEnvioCel1" />
+              <Mapping SourceColumn="QtdEnvioCel2" DataSetColumn="QtdEnvioCel2" />
+              <Mapping SourceColumn="QtdEnvioCel3" DataSetColumn="QtdEnvioCel3" />
+              <Mapping SourceColumn="QtdEnvioCel4" DataSetColumn="QtdEnvioCel4" />
+              <Mapping SourceColumn="retornoCel1" DataSetColumn="retornoCel1" />
+              <Mapping SourceColumn="retornoCel2" DataSetColumn="retornoCel2" />
+              <Mapping SourceColumn="retornoCel3" DataSetColumn="retornoCel3" />
+              <Mapping SourceColumn="retornoCel4" DataSetColumn="retornoCel4" />
+              <Mapping SourceColumn="IdContatoLocaSMS" DataSetColumn="IdContatoLocaSMS" />
+              <Mapping SourceColumn="Destino" DataSetColumn="Destino" />
+              <Mapping SourceColumn="Operadora" DataSetColumn="Operadora" />
+              <Mapping SourceColumn="Data" DataSetColumn="Data" />
+              <Mapping SourceColumn="DataEnvio" DataSetColumn="DataEnvio" />
+              <Mapping SourceColumn="retornoLocaSMS" DataSetColumn="retornoLocaSMS" />
+              <Mapping SourceColumn="CodigoRef" DataSetColumn="CodigoRef" />
+              <Mapping SourceColumn="CodigoLocaSMS" DataSetColumn="CodigoLocaSMS" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ContatosLocaSMS.Id, 
+              ContatosLocaSMS.Nome, 
+              ContatosLocaSMS.Celular1, 
+              ContatosLocaSMS.Celular2, 
+              ContatosLocaSMS.Celular3, 
+              ContatosLocaSMS.Celular4, 
+              ContatosLocaSMS.QtdEnvioCel1, 
+              ContatosLocaSMS.QtdEnvioCel2, 
+              ContatosLocaSMS.QtdEnvioCel3, 
+              ContatosLocaSMS.QtdEnvioCel4, 
+              ContatosLocaSMS.retornoCel1, 
+              ContatosLocaSMS.retornoCel2, 
+              ContatosLocaSMS.retornoCel3, 
+              ContatosLocaSMS.retornoCel4, 
+              CampanhaItemLocaSMS.IdContatoLocaSMS, 
+              CampanhaItemLocaSMS.Destino, 
+              CampanhaItemLocaSMS.Operadora, 
+              CampanhaItemLocaSMS.Data, 
+              CampanhaItemLocaSMS.DataEnvio, 
+              CampanhaItemLocaSMS.retornoLocaSMS, 
+              CampanhaItemLocaSMS.CodigoRef, 
+              CampanhaItemLocaSMS.CodigoLocaSMS
+FROM ContatosLocaSMS 
+INNER JOIN CampanhaItemLocaSMS ON ContatosLocaSMS.Id = CampanhaItemLocaSMS.IdContatoLocaSMS
+WHERE CampanhaItemLocaSMS.IdCampanhaLocaSMS = @IdCampanhaLocaSMS</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdCampanhaLocaSMS" ColumnName="IdCampanhaLocaSMS" DataSourceName="main.CampanhaItemLocaSMS" DataTypeServer="int(4)" DbType="Int32" Direction="Input" ParameterName="@IdCampanhaLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="4" SourceColumn="IdCampanhaLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuariosLocaSMSTableAdapter" GeneratorDataComponentClassName="UsuariosLocaSMSTableAdapter" Name="UsuariosLocaSMS" UserDataComponentName="UsuariosLocaSMSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectName="main.UsuariosLocaSMS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [main].[sqlite_default_schema].[UsuariosLocaSMS] WHERE (([Descricao] = @Original_Descricao) AND ([Id] = @Original_Id) AND ([Senha] = @Original_Senha) AND ([Login] = @Original_Login) AND ([Saldo] = @Original_Saldo) AND ([DataCadastro] = @Original_DataCadastro) AND ((@IsNull_DataAlteracao = 1 AND [DataAlteracao] IS NULL) OR ([DataAlteracao] = @Original_DataAlteracao)) AND ([Bloqueado] = @Original_Bloqueado))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Senha" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Login" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Saldo" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Saldo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataCadastro" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataCadastro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataAlteracao" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Bloqueado" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Bloqueado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [main].[sqlite_default_schema].[UsuariosLocaSMS] ([Descricao], [Senha], [Login], [Saldo], [DataCadastro], [DataAlteracao], [Bloqueado]) VALUES (@Descricao, @Senha, @Login, @Saldo, @DataCadastro, @DataAlteracao, @Bloqueado)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Login" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Saldo" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Saldo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataCadastro" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataCadastro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Bloqueado" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Bloqueado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Descricao, Id, Senha, Login, Saldo, DataCadastro, DataAlteracao, Bloqueado
+FROM            UsuariosLocaSMS
+WHERE        (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="main.UsuariosLocaSMS" DataTypeServer="integer(8)" DbType="Int64" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int64" Scale="0" Size="8" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [main].[sqlite_default_schema].[UsuariosLocaSMS] SET [Descricao] = @Descricao, [Senha] = @Senha, [Login] = @Login, [Saldo] = @Saldo, [DataCadastro] = @DataCadastro, [DataAlteracao] = @DataAlteracao, [Bloqueado] = @Bloqueado WHERE (([Descricao] = @Original_Descricao) AND ([Id] = @Original_Id) AND ([Senha] = @Original_Senha) AND ([Login] = @Original_Login) AND ([Saldo] = @Original_Saldo) AND ([DataCadastro] = @Original_DataCadastro) AND ((@IsNull_DataAlteracao = 1 AND [DataAlteracao] IS NULL) OR ([DataAlteracao] = @Original_DataAlteracao)) AND ([Bloqueado] = @Original_Bloqueado))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Login" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Saldo" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Saldo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataCadastro" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataCadastro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Bloqueado" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Bloqueado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Senha" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Login" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Saldo" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Saldo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataCadastro" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataCadastro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataAlteracao" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Bloqueado" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Bloqueado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Senha" DataSetColumn="Senha" />
+              <Mapping SourceColumn="Login" DataSetColumn="Login" />
+              <Mapping SourceColumn="Saldo" DataSetColumn="Saldo" />
+              <Mapping SourceColumn="DataCadastro" DataSetColumn="DataCadastro" />
+              <Mapping SourceColumn="DataAlteracao" DataSetColumn="DataAlteracao" />
+              <Mapping SourceColumn="Bloqueado" DataSetColumn="Bloqueado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CampanhaLocaSMSTableAdapter" GeneratorDataComponentClassName="CampanhaLocaSMSTableAdapter" Name="CampanhaLocaSMS" UserDataComponentName="CampanhaLocaSMSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectName="main.CampanhaLocaSMS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [main].[sqlite_default_schema].[CampanhaLocaSMS] WHERE (([Id] = @Original_Id) AND ([IdUsuarioLocaSMS] = @Original_IdUsuarioLocaSMS) AND ([Descricao] = @Original_Descricao) AND ([Mensagem] = @Original_Mensagem) AND ([Data] = @Original_Data) AND ([AgendaSMS] = @Original_AgendaSMS) AND ((@IsNull_DataHoraAgendaSMS = 1 AND [DataHoraAgendaSMS] IS NULL) OR ([DataHoraAgendaSMS] = @Original_DataHoraAgendaSMS)) AND ((@IsNull_DataConsulta = 1 AND [DataConsulta] IS NULL) OR ([DataConsulta] = @Original_DataConsulta)) AND ((@IsNull_DataUltConsulta = 1 AND [DataUltConsulta] IS NULL) OR ([DataUltConsulta] = @Original_DataUltConsulta)) AND ((@IsNull_retornoLocaSMS = 1 AND [retornoLocaSMS] IS NULL) OR ([retornoLocaSMS] = @Original_retornoLocaSMS)) AND ((@IsNull_CodigoRetorno = 1 AND [CodigoRetorno] IS NULL) OR ([CodigoRetorno] = @Original_CodigoRetorno)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdUsuarioLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IdUsuarioLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Mensagem" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Mensagem" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Data" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Data" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_AgendaSMS" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="AgendaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataHoraAgendaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataHoraAgendaSMS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataHoraAgendaSMS" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataHoraAgendaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataConsulta" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataConsulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataConsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataUltConsulta" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataUltConsulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataUltConsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataUltConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoRetorno" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="CodigoRetorno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CodigoRetorno" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoRetorno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [main].[sqlite_default_schema].[CampanhaLocaSMS] ([Id], [IdUsuarioLocaSMS], [Descricao], [Mensagem], [Data], [AgendaSMS], [DataHoraAgendaSMS], [DataConsulta], [DataUltConsulta], [retornoLocaSMS], [CodigoRetorno]) VALUES (@Id, @IdUsuarioLocaSMS, @Descricao, @Mensagem, @Data, @AgendaSMS, @DataHoraAgendaSMS, @DataConsulta, @DataUltConsulta, @retornoLocaSMS, @CodigoRetorno)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdUsuarioLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IdUsuarioLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Mensagem" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Mensagem" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Data" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Data" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@AgendaSMS" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="AgendaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataHoraAgendaSMS" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataHoraAgendaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataConsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataConsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataUltConsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataUltConsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CodigoRetorno" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoRetorno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Id, IdUsuarioLocaSMS, Descricao, Mensagem, Data, AgendaSMS, DataHoraAgendaSMS, DataConsulta, DataUltConsulta, retornoLocaSMS, CodigoRetorno
+FROM            CampanhaLocaSMS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [main].[sqlite_default_schema].[CampanhaLocaSMS] SET [Id] = @Id, [IdUsuarioLocaSMS] = @IdUsuarioLocaSMS, [Descricao] = @Descricao, [Mensagem] = @Mensagem, [Data] = @Data, [AgendaSMS] = @AgendaSMS, [DataHoraAgendaSMS] = @DataHoraAgendaSMS, [DataConsulta] = @DataConsulta, [DataUltConsulta] = @DataUltConsulta, [retornoLocaSMS] = @retornoLocaSMS, [CodigoRetorno] = @CodigoRetorno WHERE (([Id] = @Original_Id) AND ([IdUsuarioLocaSMS] = @Original_IdUsuarioLocaSMS) AND ([Descricao] = @Original_Descricao) AND ([Mensagem] = @Original_Mensagem) AND ([Data] = @Original_Data) AND ([AgendaSMS] = @Original_AgendaSMS) AND ((@IsNull_DataHoraAgendaSMS = 1 AND [DataHoraAgendaSMS] IS NULL) OR ([DataHoraAgendaSMS] = @Original_DataHoraAgendaSMS)) AND ((@IsNull_DataConsulta = 1 AND [DataConsulta] IS NULL) OR ([DataConsulta] = @Original_DataConsulta)) AND ((@IsNull_DataUltConsulta = 1 AND [DataUltConsulta] IS NULL) OR ([DataUltConsulta] = @Original_DataUltConsulta)) AND ((@IsNull_retornoLocaSMS = 1 AND [retornoLocaSMS] IS NULL) OR ([retornoLocaSMS] = @Original_retornoLocaSMS)) AND ((@IsNull_CodigoRetorno = 1 AND [CodigoRetorno] IS NULL) OR ([CodigoRetorno] = @Original_CodigoRetorno)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdUsuarioLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IdUsuarioLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Mensagem" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Mensagem" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Data" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Data" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@AgendaSMS" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="AgendaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataHoraAgendaSMS" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataHoraAgendaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataConsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataConsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataUltConsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataUltConsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CodigoRetorno" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoRetorno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdUsuarioLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="IdUsuarioLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Descricao" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Descricao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Mensagem" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Mensagem" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Data" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Data" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_AgendaSMS" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="AgendaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataHoraAgendaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataHoraAgendaSMS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataHoraAgendaSMS" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataHoraAgendaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataConsulta" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataConsulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataConsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataUltConsulta" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataUltConsulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataUltConsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataUltConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoRetorno" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="CodigoRetorno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CodigoRetorno" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoRetorno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="IdUsuarioLocaSMS" DataSetColumn="IdUsuarioLocaSMS" />
+              <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
+              <Mapping SourceColumn="Mensagem" DataSetColumn="Mensagem" />
+              <Mapping SourceColumn="Data" DataSetColumn="Data" />
+              <Mapping SourceColumn="AgendaSMS" DataSetColumn="AgendaSMS" />
+              <Mapping SourceColumn="DataHoraAgendaSMS" DataSetColumn="DataHoraAgendaSMS" />
+              <Mapping SourceColumn="DataConsulta" DataSetColumn="DataConsulta" />
+              <Mapping SourceColumn="DataUltConsulta" DataSetColumn="DataUltConsulta" />
+              <Mapping SourceColumn="retornoLocaSMS" DataSetColumn="retornoLocaSMS" />
+              <Mapping SourceColumn="CodigoRetorno" DataSetColumn="CodigoRetorno" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectName="main.CampanhaLocaSMS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Id, IdUsuarioLocaSMS, Descricao, Mensagem, Data, AgendaSMS, DataHoraAgendaSMS, DataConsulta, DataUltConsulta, retornoLocaSMS, CodigoRetorno
+FROM            CampanhaLocaSMS
+WHERE        (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="main.CampanhaLocaSMS" DataTypeServer="decimal(8)" DbType="Decimal" Direction="Input" ParameterName="@Id" Precision="53" ProviderType="Decimal" Scale="0" Size="8" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ContatosLocaSMSTableAdapter" GeneratorDataComponentClassName="ContatosLocaSMSTableAdapter" Name="ContatosLocaSMS" UserDataComponentName="ContatosLocaSMSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectName="main.ContatosLocaSMS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [main].[sqlite_default_schema].[ContatosLocaSMS] WHERE (([Id] = @Original_Id) AND ([Nome] = @Original_Nome) AND ((@IsNull_Bairro = 1 AND [Bairro] IS NULL) OR ([Bairro] = @Original_Bairro)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Numero = 1 AND [Numero] IS NULL) OR ([Numero] = @Original_Numero)) AND ((@IsNull_Complemento = 1 AND [Complemento] IS NULL) OR ([Complemento] = @Original_Complemento)) AND ((@IsNull_Cep = 1 AND [Cep] IS NULL) OR ([Cep] = @Original_Cep)) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_UF = 1 AND [UF] IS NULL) OR ([UF] = @Original_UF)) AND ([DataCadastro] = @Original_DataCadastro) AND ((@IsNull_DataAlteracao = 1 AND [DataAlteracao] IS NULL) OR ([DataAlteracao] = @Original_DataAlteracao)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_DDD = 1 AND [DDD] IS NULL) OR ([DDD] = @Original_DDD)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ((@IsNull_Celular1 = 1 AND [Celular1] IS NULL) OR ([Celular1] = @Original_Celular1)) AND ((@IsNull_Celular2 = 1 AND [Celular2] IS NULL) OR ([Celular2] = @Original_Celular2)) AND ((@IsNull_Celular3 = 1 AND [Celular3] IS NULL) OR ([Celular3] = @Original_Celular3)) AND ((@IsNull_Celular4 = 1 AND [Celular4] IS NULL) OR ([Celular4] = @Original_Celular4)) AND ((@IsNull_QtdEnvioCel1 = 1 AND [QtdEnvioCel1] IS NULL) OR ([QtdEnvioCel1] = @Original_QtdEnvioCel1)) AND ((@IsNull_QtdEnvioCel2 = 1 AND [QtdEnvioCel2] IS NULL) OR ([QtdEnvioCel2] = @Original_QtdEnvioCel2)) AND ((@IsNull_QtdEnvioCel3 = 1 AND [QtdEnvioCel3] IS NULL) OR ([QtdEnvioCel3] = @Original_QtdEnvioCel3)) AND ((@IsNull_QtdEnvioCel4 = 1 AND [QtdEnvioCel4] IS NULL) OR ([QtdEnvioCel4] = @Original_QtdEnvioCel4)) AND ((@IsNull_retornoCel1 = 1 AND [retornoCel1] IS NULL) OR ([retornoCel1] = @Original_retornoCel1)) AND ((@IsNull_retornoCel2 = 1 AND [retornoCel2] IS NULL) OR ([retornoCel2] = @Original_retornoCel2)) AND ((@IsNull_retornoCel3 = 1 AND [retornoCel3] IS NULL) OR ([retornoCel3] = @Original_retornoCel3)) AND ((@IsNull_retornoCel4 = 1 AND [retornoCel4] IS NULL) OR ([retornoCel4] = @Original_retornoCel4)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nome" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Bairro" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Bairro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Bairro" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Bairro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Endereco" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Endereco" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Numero" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Numero" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Numero" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Complemento" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Complemento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Complemento" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Complemento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cep" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Cep" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Cep" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Cep" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cidade" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Cidade" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Cidade" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Cidade" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Estado" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Estado" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UF" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="UF" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UF" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="UF" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataCadastro" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataCadastro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataAlteracao" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DDD" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DDD" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_DDD" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="DDD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Telefone" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Telefone" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Celular1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Celular1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Celular2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Celular2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Celular3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Celular3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Celular4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Celular4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QtdEnvioCel1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QtdEnvioCel1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QtdEnvioCel2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QtdEnvioCel2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QtdEnvioCel3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QtdEnvioCel3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QtdEnvioCel4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QtdEnvioCel4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoCel1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoCel1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoCel1" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoCel2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoCel2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoCel2" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoCel3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoCel3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoCel3" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoCel4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoCel4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoCel4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [main].[sqlite_default_schema].[ContatosLocaSMS] ([Id], [Nome], [Bairro], [Endereco], [Numero], [Complemento], [Cep], [Cidade], [Estado], [UF], [DataCadastro], [DataAlteracao], [Email], [DDD], [Telefone], [Celular1], [Celular2], [Celular3], [Celular4], [QtdEnvioCel1], [QtdEnvioCel2], [QtdEnvioCel3], [QtdEnvioCel4], [retornoCel1], [retornoCel2], [retornoCel3], [retornoCel4]) VALUES (@Id, @Nome, @Bairro, @Endereco, @Numero, @Complemento, @Cep, @Cidade, @Estado, @UF, @DataCadastro, @DataAlteracao, @Email, @DDD, @Telefone, @Celular1, @Celular2, @Celular3, @Celular4, @QtdEnvioCel1, @QtdEnvioCel2, @QtdEnvioCel3, @QtdEnvioCel4, @retornoCel1, @retornoCel2, @retornoCel3, @retornoCel4)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Bairro" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Bairro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Endereco" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Numero" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Complemento" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Complemento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cep" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Cep" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cidade" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Cidade" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Estado" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UF" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="UF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataCadastro" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataCadastro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@DDD" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="DDD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Telefone" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Celular1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Celular2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Celular3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Celular4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QtdEnvioCel1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QtdEnvioCel2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QtdEnvioCel3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QtdEnvioCel4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoCel1" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoCel2" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoCel3" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoCel4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Id, Nome, Bairro, Endereco, Numero, Complemento, Cep, Cidade, Estado, UF, DataCadastro, DataAlteracao, Email, DDD, Telefone, Celular1, Celular2, Celular3, Celular4, QtdEnvioCel1, QtdEnvioCel2, 
+                         QtdEnvioCel3, QtdEnvioCel4, retornoCel1, retornoCel2, retornoCel3, retornoCel4
+FROM            ContatosLocaSMS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [main].[sqlite_default_schema].[ContatosLocaSMS] SET [Id] = @Id, [Nome] = @Nome, [Bairro] = @Bairro, [Endereco] = @Endereco, [Numero] = @Numero, [Complemento] = @Complemento, [Cep] = @Cep, [Cidade] = @Cidade, [Estado] = @Estado, [UF] = @UF, [DataCadastro] = @DataCadastro, [DataAlteracao] = @DataAlteracao, [Email] = @Email, [DDD] = @DDD, [Telefone] = @Telefone, [Celular1] = @Celular1, [Celular2] = @Celular2, [Celular3] = @Celular3, [Celular4] = @Celular4, [QtdEnvioCel1] = @QtdEnvioCel1, [QtdEnvioCel2] = @QtdEnvioCel2, [QtdEnvioCel3] = @QtdEnvioCel3, [QtdEnvioCel4] = @QtdEnvioCel4, [retornoCel1] = @retornoCel1, [retornoCel2] = @retornoCel2, [retornoCel3] = @retornoCel3, [retornoCel4] = @retornoCel4 WHERE (([Id] = @Original_Id) AND ([Nome] = @Original_Nome) AND ((@IsNull_Bairro = 1 AND [Bairro] IS NULL) OR ([Bairro] = @Original_Bairro)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Numero = 1 AND [Numero] IS NULL) OR ([Numero] = @Original_Numero)) AND ((@IsNull_Complemento = 1 AND [Complemento] IS NULL) OR ([Complemento] = @Original_Complemento)) AND ((@IsNull_Cep = 1 AND [Cep] IS NULL) OR ([Cep] = @Original_Cep)) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_UF = 1 AND [UF] IS NULL) OR ([UF] = @Original_UF)) AND ([DataCadastro] = @Original_DataCadastro) AND ((@IsNull_DataAlteracao = 1 AND [DataAlteracao] IS NULL) OR ([DataAlteracao] = @Original_DataAlteracao)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_DDD = 1 AND [DDD] IS NULL) OR ([DDD] = @Original_DDD)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ((@IsNull_Celular1 = 1 AND [Celular1] IS NULL) OR ([Celular1] = @Original_Celular1)) AND ((@IsNull_Celular2 = 1 AND [Celular2] IS NULL) OR ([Celular2] = @Original_Celular2)) AND ((@IsNull_Celular3 = 1 AND [Celular3] IS NULL) OR ([Celular3] = @Original_Celular3)) AND ((@IsNull_Celular4 = 1 AND [Celular4] IS NULL) OR ([Celular4] = @Original_Celular4)) AND ((@IsNull_QtdEnvioCel1 = 1 AND [QtdEnvioCel1] IS NULL) OR ([QtdEnvioCel1] = @Original_QtdEnvioCel1)) AND ((@IsNull_QtdEnvioCel2 = 1 AND [QtdEnvioCel2] IS NULL) OR ([QtdEnvioCel2] = @Original_QtdEnvioCel2)) AND ((@IsNull_QtdEnvioCel3 = 1 AND [QtdEnvioCel3] IS NULL) OR ([QtdEnvioCel3] = @Original_QtdEnvioCel3)) AND ((@IsNull_QtdEnvioCel4 = 1 AND [QtdEnvioCel4] IS NULL) OR ([QtdEnvioCel4] = @Original_QtdEnvioCel4)) AND ((@IsNull_retornoCel1 = 1 AND [retornoCel1] IS NULL) OR ([retornoCel1] = @Original_retornoCel1)) AND ((@IsNull_retornoCel2 = 1 AND [retornoCel2] IS NULL) OR ([retornoCel2] = @Original_retornoCel2)) AND ((@IsNull_retornoCel3 = 1 AND [retornoCel3] IS NULL) OR ([retornoCel3] = @Original_retornoCel3)) AND ((@IsNull_retornoCel4 = 1 AND [retornoCel4] IS NULL) OR ([retornoCel4] = @Original_retornoCel4)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Bairro" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Bairro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Endereco" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Numero" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Complemento" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Complemento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cep" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Cep" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cidade" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Cidade" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Estado" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UF" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="UF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataCadastro" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataCadastro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@DDD" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="DDD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Telefone" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Celular1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Celular2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Celular3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Celular4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QtdEnvioCel1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QtdEnvioCel2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QtdEnvioCel3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QtdEnvioCel4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoCel1" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoCel2" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoCel3" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoCel4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nome" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Bairro" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Bairro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Bairro" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Bairro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Endereco" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Endereco" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Numero" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Numero" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Numero" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Complemento" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Complemento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Complemento" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Complemento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cep" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Cep" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Cep" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Cep" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cidade" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Cidade" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Cidade" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Cidade" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Estado" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Estado" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UF" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="UF" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UF" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="UF" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataCadastro" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataCadastro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataAlteracao" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataAlteracao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DDD" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DDD" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_DDD" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="DDD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Telefone" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Telefone" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Celular1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Celular1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Celular2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Celular2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Celular3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Celular3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Celular4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Celular4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Celular4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QtdEnvioCel1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QtdEnvioCel1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QtdEnvioCel2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QtdEnvioCel2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QtdEnvioCel3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QtdEnvioCel3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QtdEnvioCel4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QtdEnvioCel4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="QtdEnvioCel4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoCel1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoCel1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoCel1" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoCel2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoCel2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoCel2" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoCel3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoCel3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoCel3" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoCel4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoCel4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoCel4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoCel4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
+              <Mapping SourceColumn="Bairro" DataSetColumn="Bairro" />
+              <Mapping SourceColumn="Endereco" DataSetColumn="Endereco" />
+              <Mapping SourceColumn="Numero" DataSetColumn="Numero" />
+              <Mapping SourceColumn="Complemento" DataSetColumn="Complemento" />
+              <Mapping SourceColumn="Cep" DataSetColumn="Cep" />
+              <Mapping SourceColumn="Cidade" DataSetColumn="Cidade" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="UF" DataSetColumn="UF" />
+              <Mapping SourceColumn="DataCadastro" DataSetColumn="DataCadastro" />
+              <Mapping SourceColumn="DataAlteracao" DataSetColumn="DataAlteracao" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="DDD" DataSetColumn="DDD" />
+              <Mapping SourceColumn="Telefone" DataSetColumn="Telefone" />
+              <Mapping SourceColumn="Celular1" DataSetColumn="Celular1" />
+              <Mapping SourceColumn="Celular2" DataSetColumn="Celular2" />
+              <Mapping SourceColumn="Celular3" DataSetColumn="Celular3" />
+              <Mapping SourceColumn="Celular4" DataSetColumn="Celular4" />
+              <Mapping SourceColumn="QtdEnvioCel1" DataSetColumn="QtdEnvioCel1" />
+              <Mapping SourceColumn="QtdEnvioCel2" DataSetColumn="QtdEnvioCel2" />
+              <Mapping SourceColumn="QtdEnvioCel3" DataSetColumn="QtdEnvioCel3" />
+              <Mapping SourceColumn="QtdEnvioCel4" DataSetColumn="QtdEnvioCel4" />
+              <Mapping SourceColumn="retornoCel1" DataSetColumn="retornoCel1" />
+              <Mapping SourceColumn="retornoCel2" DataSetColumn="retornoCel2" />
+              <Mapping SourceColumn="retornoCel3" DataSetColumn="retornoCel3" />
+              <Mapping SourceColumn="retornoCel4" DataSetColumn="retornoCel4" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CampanhaItemLocaSMSTableAdapter" GeneratorDataComponentClassName="CampanhaItemLocaSMSTableAdapter" Name="CampanhaItemLocaSMS" UserDataComponentName="CampanhaItemLocaSMSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectName="main.CampanhaItemLocaSMS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [main].[sqlite_default_schema].[CampanhaItemLocaSMS] WHERE (([IdCampanhaLocaSMS] = @Original_IdCampanhaLocaSMS) AND ([IdContatoLocaSMS] = @Original_IdContatoLocaSMS) AND ((@IsNull_Destino = 1 AND [Destino] IS NULL) OR ([Destino] = @Original_Destino)) AND ((@IsNull_Operadora = 1 AND [Operadora] IS NULL) OR ([Operadora] = @Original_Operadora)) AND ((@IsNull_Preso = 1 AND [Preso] IS NULL) OR ([Preso] = @Original_Preso)) AND ((@IsNull_Resposta = 1 AND [Resposta] IS NULL) OR ([Resposta] = @Original_Resposta)) AND ([Data] = @Original_Data) AND ([DataEnvio] = @Original_DataEnvio) AND ((@IsNull_retornoLocaSMS = 1 AND [retornoLocaSMS] IS NULL) OR ([retornoLocaSMS] = @Original_retornoLocaSMS)) AND ([CodigoRef] = @Original_CodigoRef) AND ((@IsNull_CodigoLocaSMS = 1 AND [CodigoLocaSMS] IS NULL) OR ([CodigoLocaSMS] = @Original_CodigoLocaSMS)) AND ((@IsNull_Parametro1 = 1 AND [Parametro1] IS NULL) OR ([Parametro1] = @Original_Parametro1)) AND ((@IsNull_Parametro2 = 1 AND [Parametro2] IS NULL) OR ([Parametro2] = @Original_Parametro2)) AND ((@IsNull_Parametro3 = 1 AND [Parametro3] IS NULL) OR ([Parametro3] = @Original_Parametro3)) AND ((@IsNull_Parametro4 = 1 AND [Parametro4] IS NULL) OR ([Parametro4] = @Original_Parametro4)) AND ((@IsNull_Parametro5 = 1 AND [Parametro5] IS NULL) OR ([Parametro5] = @Original_Parametro5)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_IdCampanhaLocaSMS" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="IdCampanhaLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_IdContatoLocaSMS" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="IdContatoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Destino" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Destino" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Destino" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Destino" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Operadora" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Operadora" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Operadora" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Operadora" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Preso" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Preso" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Preso" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Preso" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Resposta" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Resposta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Resposta" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Resposta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Data" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Data" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataEnvio" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataEnvio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CodigoRef" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoRef" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="CodigoLocaSMS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CodigoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro1" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro2" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro3" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro5" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro5" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro5" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [main].[sqlite_default_schema].[CampanhaItemLocaSMS] ([IdCampanhaLocaSMS], [IdContatoLocaSMS], [Destino], [Operadora], [Preso], [Resposta], [Data], [DataEnvio], [retornoLocaSMS], [CodigoRef], [CodigoLocaSMS], [Parametro1], [Parametro2], [Parametro3], [Parametro4], [Parametro5]) VALUES (@IdCampanhaLocaSMS, @IdContatoLocaSMS, @Destino, @Operadora, @Preso, @Resposta, @Data, @DataEnvio, @retornoLocaSMS, @CodigoRef, @CodigoLocaSMS, @Parametro1, @Parametro2, @Parametro3, @Parametro4, @Parametro5)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@IdCampanhaLocaSMS" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="IdCampanhaLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@IdContatoLocaSMS" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="IdContatoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Destino" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Destino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Operadora" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Operadora" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Preso" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Preso" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Resposta" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Resposta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Data" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Data" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataEnvio" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataEnvio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CodigoRef" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoRef" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CodigoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro1" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro2" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro3" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro5" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IdCampanhaLocaSMS, IdContatoLocaSMS, Destino, Operadora, Preso, Resposta, Data, DataEnvio, retornoLocaSMS, CodigoRef, CodigoLocaSMS, Parametro1, Parametro2, Parametro3, Parametro4, 
+                         Parametro5
+FROM            CampanhaItemLocaSMS
+WHERE        (IdCampanhaLocaSMS = @IdCampanhaLocaSMS)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdCampanhaLocaSMS" ColumnName="IdCampanhaLocaSMS" DataSourceName="main.CampanhaItemLocaSMS" DataTypeServer="decimal(8)" DbType="Decimal" Direction="Input" ParameterName="@IdCampanhaLocaSMS" Precision="53" ProviderType="Decimal" Scale="0" Size="8" SourceColumn="IdCampanhaLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [main].[sqlite_default_schema].[CampanhaItemLocaSMS] SET [IdCampanhaLocaSMS] = @IdCampanhaLocaSMS, [IdContatoLocaSMS] = @IdContatoLocaSMS, [Destino] = @Destino, [Operadora] = @Operadora, [Preso] = @Preso, [Resposta] = @Resposta, [Data] = @Data, [DataEnvio] = @DataEnvio, [retornoLocaSMS] = @retornoLocaSMS, [CodigoRef] = @CodigoRef, [CodigoLocaSMS] = @CodigoLocaSMS, [Parametro1] = @Parametro1, [Parametro2] = @Parametro2, [Parametro3] = @Parametro3, [Parametro4] = @Parametro4, [Parametro5] = @Parametro5 WHERE (([IdCampanhaLocaSMS] = @Original_IdCampanhaLocaSMS) AND ([IdContatoLocaSMS] = @Original_IdContatoLocaSMS) AND ((@IsNull_Destino = 1 AND [Destino] IS NULL) OR ([Destino] = @Original_Destino)) AND ((@IsNull_Operadora = 1 AND [Operadora] IS NULL) OR ([Operadora] = @Original_Operadora)) AND ((@IsNull_Preso = 1 AND [Preso] IS NULL) OR ([Preso] = @Original_Preso)) AND ((@IsNull_Resposta = 1 AND [Resposta] IS NULL) OR ([Resposta] = @Original_Resposta)) AND ([Data] = @Original_Data) AND ([DataEnvio] = @Original_DataEnvio) AND ((@IsNull_retornoLocaSMS = 1 AND [retornoLocaSMS] IS NULL) OR ([retornoLocaSMS] = @Original_retornoLocaSMS)) AND ([CodigoRef] = @Original_CodigoRef) AND ((@IsNull_CodigoLocaSMS = 1 AND [CodigoLocaSMS] IS NULL) OR ([CodigoLocaSMS] = @Original_CodigoLocaSMS)) AND ((@IsNull_Parametro1 = 1 AND [Parametro1] IS NULL) OR ([Parametro1] = @Original_Parametro1)) AND ((@IsNull_Parametro2 = 1 AND [Parametro2] IS NULL) OR ([Parametro2] = @Original_Parametro2)) AND ((@IsNull_Parametro3 = 1 AND [Parametro3] IS NULL) OR ([Parametro3] = @Original_Parametro3)) AND ((@IsNull_Parametro4 = 1 AND [Parametro4] IS NULL) OR ([Parametro4] = @Original_Parametro4)) AND ((@IsNull_Parametro5 = 1 AND [Parametro5] IS NULL) OR ([Parametro5] = @Original_Parametro5)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@IdCampanhaLocaSMS" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="IdCampanhaLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@IdContatoLocaSMS" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="IdContatoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Destino" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Destino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Operadora" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Operadora" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Preso" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Preso" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Resposta" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Resposta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Data" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Data" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataEnvio" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataEnvio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@retornoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CodigoRef" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoRef" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CodigoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro1" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro2" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro3" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Parametro5" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_IdCampanhaLocaSMS" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="IdCampanhaLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_IdContatoLocaSMS" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="IdContatoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Destino" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Destino" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Destino" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Destino" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Operadora" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Operadora" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Operadora" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Operadora" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Preso" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Preso" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Preso" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Preso" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Resposta" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Resposta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Resposta" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Resposta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Data" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Data" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataEnvio" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataEnvio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_retornoLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_retornoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="retornoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CodigoRef" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoRef" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoLocaSMS" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="CodigoLocaSMS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CodigoLocaSMS" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="CodigoLocaSMS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro1" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro2" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro3" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Parametro5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Parametro5" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Parametro5" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="Parametro5" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdCampanhaLocaSMS" DataSetColumn="IdCampanhaLocaSMS" />
+              <Mapping SourceColumn="IdContatoLocaSMS" DataSetColumn="IdContatoLocaSMS" />
+              <Mapping SourceColumn="Destino" DataSetColumn="Destino" />
+              <Mapping SourceColumn="Operadora" DataSetColumn="Operadora" />
+              <Mapping SourceColumn="Preso" DataSetColumn="Preso" />
+              <Mapping SourceColumn="Resposta" DataSetColumn="Resposta" />
+              <Mapping SourceColumn="Data" DataSetColumn="Data" />
+              <Mapping SourceColumn="DataEnvio" DataSetColumn="DataEnvio" />
+              <Mapping SourceColumn="retornoLocaSMS" DataSetColumn="retornoLocaSMS" />
+              <Mapping SourceColumn="CodigoRef" DataSetColumn="CodigoRef" />
+              <Mapping SourceColumn="CodigoLocaSMS" DataSetColumn="CodigoLocaSMS" />
+              <Mapping SourceColumn="Parametro1" DataSetColumn="Parametro1" />
+              <Mapping SourceColumn="Parametro2" DataSetColumn="Parametro2" />
+              <Mapping SourceColumn="Parametro3" DataSetColumn="Parametro3" />
+              <Mapping SourceColumn="Parametro4" DataSetColumn="Parametro4" />
+              <Mapping SourceColumn="Parametro5" DataSetColumn="Parametro5" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Seq_CampanhaLocaSMSTableAdapter" GeneratorDataComponentClassName="Seq_CampanhaLocaSMSTableAdapter" Name="Seq_CampanhaLocaSMS" UserDataComponentName="Seq_CampanhaLocaSMSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValSystemDbSQLite (Settings)" DbObjectName="main.Seq_CampanhaLocaSMS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [main].[sqlite_default_schema].[Seq_CampanhaLocaSMS] WHERE (([Id] = @Original_Id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [main].[sqlite_default_schema].[Seq_CampanhaLocaSMS] ([Id]) VALUES (@Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Id
+FROM            Seq_CampanhaLocaSMS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [main].[sqlite_default_schema].[Seq_CampanhaLocaSMS] SET [Id] = @Id WHERE (([Id] = @Original_Id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CampanhaLocaSMSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CampanhaLocaSMSDataSet" msprop:Generator_UserDSName="CampanhaLocaSMSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConsultaItem" msprop:Generator_TableClassName="ConsultaItemDataTable" msprop:Generator_TableVarName="tableConsultaItem" msprop:Generator_RowChangedName="ConsultaItemRowChanged" msprop:Generator_TablePropName="ConsultaItem" msprop:Generator_RowDeletingName="ConsultaItemRowDeleting" msprop:Generator_RowChangingName="ConsultaItemRowChanging" msprop:Generator_RowEvHandlerName="ConsultaItemRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultaItemRowDeleted" msprop:Generator_RowClassName="ConsultaItemRow" msprop:Generator_UserTableName="ConsultaItem" msprop:Generator_RowEvArgName="ConsultaItemRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Celular1" msprop:Generator_ColumnVarNameInTable="columnCelular1" msprop:Generator_ColumnPropNameInRow="Celular1" msprop:Generator_ColumnPropNameInTable="Celular1Column" msprop:Generator_UserColumnName="Celular1" type="xs:int" minOccurs="0" />
+              <xs:element name="Celular2" msprop:Generator_ColumnVarNameInTable="columnCelular2" msprop:Generator_ColumnPropNameInRow="Celular2" msprop:Generator_ColumnPropNameInTable="Celular2Column" msprop:Generator_UserColumnName="Celular2" type="xs:int" minOccurs="0" />
+              <xs:element name="Celular3" msprop:Generator_ColumnVarNameInTable="columnCelular3" msprop:Generator_ColumnPropNameInRow="Celular3" msprop:Generator_ColumnPropNameInTable="Celular3Column" msprop:Generator_UserColumnName="Celular3" type="xs:int" minOccurs="0" />
+              <xs:element name="Celular4" msprop:Generator_ColumnVarNameInTable="columnCelular4" msprop:Generator_ColumnPropNameInRow="Celular4" msprop:Generator_ColumnPropNameInTable="Celular4Column" msprop:Generator_UserColumnName="Celular4" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdEnvioCel1" msprop:Generator_ColumnVarNameInTable="columnQtdEnvioCel1" msprop:Generator_ColumnPropNameInRow="QtdEnvioCel1" msprop:Generator_ColumnPropNameInTable="QtdEnvioCel1Column" msprop:Generator_UserColumnName="QtdEnvioCel1" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdEnvioCel2" msprop:Generator_ColumnVarNameInTable="columnQtdEnvioCel2" msprop:Generator_ColumnPropNameInRow="QtdEnvioCel2" msprop:Generator_ColumnPropNameInTable="QtdEnvioCel2Column" msprop:Generator_UserColumnName="QtdEnvioCel2" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdEnvioCel3" msprop:Generator_ColumnVarNameInTable="columnQtdEnvioCel3" msprop:Generator_ColumnPropNameInRow="QtdEnvioCel3" msprop:Generator_ColumnPropNameInTable="QtdEnvioCel3Column" msprop:Generator_UserColumnName="QtdEnvioCel3" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdEnvioCel4" msprop:Generator_ColumnVarNameInTable="columnQtdEnvioCel4" msprop:Generator_ColumnPropNameInRow="QtdEnvioCel4" msprop:Generator_ColumnPropNameInTable="QtdEnvioCel4Column" msprop:Generator_UserColumnName="QtdEnvioCel4" type="xs:int" minOccurs="0" />
+              <xs:element name="retornoCel1" msprop:Generator_ColumnVarNameInTable="columnretornoCel1" msprop:Generator_ColumnPropNameInRow="retornoCel1" msprop:Generator_ColumnPropNameInTable="retornoCel1Column" msprop:Generator_UserColumnName="retornoCel1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="retornoCel2" msprop:Generator_ColumnVarNameInTable="columnretornoCel2" msprop:Generator_ColumnPropNameInRow="retornoCel2" msprop:Generator_ColumnPropNameInTable="retornoCel2Column" msprop:Generator_UserColumnName="retornoCel2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="retornoCel3" msprop:Generator_ColumnVarNameInTable="columnretornoCel3" msprop:Generator_ColumnPropNameInRow="retornoCel3" msprop:Generator_ColumnPropNameInTable="retornoCel3Column" msprop:Generator_UserColumnName="retornoCel3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="retornoCel4" msprop:Generator_ColumnVarNameInTable="columnretornoCel4" msprop:Generator_ColumnPropNameInRow="retornoCel4" msprop:Generator_ColumnPropNameInTable="retornoCel4Column" msprop:Generator_UserColumnName="retornoCel4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdContatoLocaSMS" msprop:Generator_ColumnVarNameInTable="columnIdContatoLocaSMS" msprop:Generator_ColumnPropNameInRow="IdContatoLocaSMS" msprop:Generator_ColumnPropNameInTable="IdContatoLocaSMSColumn" msprop:Generator_UserColumnName="IdContatoLocaSMS" type="xs:int" />
+              <xs:element name="Destino" msprop:Generator_ColumnVarNameInTable="columnDestino" msprop:Generator_ColumnPropNameInRow="Destino" msprop:Generator_ColumnPropNameInTable="DestinoColumn" msprop:Generator_UserColumnName="Destino" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Operadora" msprop:Generator_ColumnVarNameInTable="columnOperadora" msprop:Generator_ColumnPropNameInRow="Operadora" msprop:Generator_ColumnPropNameInTable="OperadoraColumn" msprop:Generator_UserColumnName="Operadora" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:dateTime" />
+              <xs:element name="DataEnvio" msprop:Generator_ColumnVarNameInTable="columnDataEnvio" msprop:Generator_ColumnPropNameInRow="DataEnvio" msprop:Generator_ColumnPropNameInTable="DataEnvioColumn" msprop:Generator_UserColumnName="DataEnvio" type="xs:dateTime" />
+              <xs:element name="retornoLocaSMS" msprop:Generator_ColumnVarNameInTable="columnretornoLocaSMS" msprop:Generator_ColumnPropNameInRow="retornoLocaSMS" msprop:Generator_ColumnPropNameInTable="retornoLocaSMSColumn" msprop:Generator_UserColumnName="retornoLocaSMS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoRef" msprop:Generator_ColumnVarNameInTable="columnCodigoRef" msprop:Generator_ColumnPropNameInRow="CodigoRef" msprop:Generator_ColumnPropNameInTable="CodigoRefColumn" msprop:Generator_UserColumnName="CodigoRef">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoLocaSMS" msprop:Generator_ColumnVarNameInTable="columnCodigoLocaSMS" msprop:Generator_ColumnPropNameInRow="CodigoLocaSMS" msprop:Generator_ColumnPropNameInTable="CodigoLocaSMSColumn" msprop:Generator_UserColumnName="CodigoLocaSMS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UsuariosLocaSMS" msprop:Generator_TableClassName="UsuariosLocaSMSDataTable" msprop:Generator_TableVarName="tableUsuariosLocaSMS" msprop:Generator_TablePropName="UsuariosLocaSMS" msprop:Generator_RowDeletingName="UsuariosLocaSMSRowDeleting" msprop:Generator_RowChangingName="UsuariosLocaSMSRowChanging" msprop:Generator_RowEvHandlerName="UsuariosLocaSMSRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosLocaSMSRowDeleted" msprop:Generator_UserTableName="UsuariosLocaSMS" msprop:Generator_RowChangedName="UsuariosLocaSMSRowChanged" msprop:Generator_RowEvArgName="UsuariosLocaSMSRowChangeEvent" msprop:Generator_RowClassName="UsuariosLocaSMSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="Senha" msprop:Generator_ColumnVarNameInTable="columnSenha" msprop:Generator_ColumnPropNameInRow="Senha" msprop:Generator_ColumnPropNameInTable="SenhaColumn" msprop:Generator_UserColumnName="Senha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Login" msprop:Generator_ColumnVarNameInTable="columnLogin" msprop:Generator_ColumnPropNameInRow="Login" msprop:Generator_ColumnPropNameInTable="LoginColumn" msprop:Generator_UserColumnName="Login">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:decimal" />
+              <xs:element name="DataCadastro" msprop:Generator_ColumnVarNameInTable="columnDataCadastro" msprop:Generator_ColumnPropNameInRow="DataCadastro" msprop:Generator_ColumnPropNameInTable="DataCadastroColumn" msprop:Generator_UserColumnName="DataCadastro" type="xs:dateTime" />
+              <xs:element name="DataAlteracao" msprop:Generator_ColumnVarNameInTable="columnDataAlteracao" msprop:Generator_ColumnPropNameInRow="DataAlteracao" msprop:Generator_ColumnPropNameInTable="DataAlteracaoColumn" msprop:Generator_UserColumnName="DataAlteracao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Bloqueado" msprop:Generator_ColumnVarNameInTable="columnBloqueado" msprop:Generator_ColumnPropNameInRow="Bloqueado" msprop:Generator_ColumnPropNameInTable="BloqueadoColumn" msprop:Generator_UserColumnName="Bloqueado" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CampanhaLocaSMS" msprop:Generator_TableClassName="CampanhaLocaSMSDataTable" msprop:Generator_TableVarName="tableCampanhaLocaSMS" msprop:Generator_TablePropName="CampanhaLocaSMS" msprop:Generator_RowDeletingName="CampanhaLocaSMSRowDeleting" msprop:Generator_RowChangingName="CampanhaLocaSMSRowChanging" msprop:Generator_RowEvHandlerName="CampanhaLocaSMSRowChangeEventHandler" msprop:Generator_RowDeletedName="CampanhaLocaSMSRowDeleted" msprop:Generator_UserTableName="CampanhaLocaSMS" msprop:Generator_RowChangedName="CampanhaLocaSMSRowChanged" msprop:Generator_RowEvArgName="CampanhaLocaSMSRowChangeEvent" msprop:Generator_RowClassName="CampanhaLocaSMSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:decimal" />
+              <xs:element name="IdUsuarioLocaSMS" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioLocaSMS" msprop:Generator_ColumnPropNameInRow="IdUsuarioLocaSMS" msprop:Generator_ColumnPropNameInTable="IdUsuarioLocaSMSColumn" msprop:Generator_UserColumnName="IdUsuarioLocaSMS" type="xs:int" />
+              <xs:element name="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mensagem" msprop:Generator_ColumnVarNameInTable="columnMensagem" msprop:Generator_ColumnPropNameInRow="Mensagem" msprop:Generator_ColumnPropNameInTable="MensagemColumn" msprop:Generator_UserColumnName="Mensagem">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="155" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:dateTime" />
+              <xs:element name="AgendaSMS" msprop:Generator_ColumnVarNameInTable="columnAgendaSMS" msprop:Generator_ColumnPropNameInRow="AgendaSMS" msprop:Generator_ColumnPropNameInTable="AgendaSMSColumn" msprop:Generator_UserColumnName="AgendaSMS" type="xs:boolean" />
+              <xs:element name="DataHoraAgendaSMS" msprop:Generator_ColumnVarNameInTable="columnDataHoraAgendaSMS" msprop:Generator_ColumnPropNameInRow="DataHoraAgendaSMS" msprop:Generator_ColumnPropNameInTable="DataHoraAgendaSMSColumn" msprop:Generator_UserColumnName="DataHoraAgendaSMS" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataConsulta" msprop:Generator_ColumnVarNameInTable="columnDataConsulta" msprop:Generator_ColumnPropNameInRow="DataConsulta" msprop:Generator_ColumnPropNameInTable="DataConsultaColumn" msprop:Generator_UserColumnName="DataConsulta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataUltConsulta" msprop:Generator_ColumnVarNameInTable="columnDataUltConsulta" msprop:Generator_ColumnPropNameInRow="DataUltConsulta" msprop:Generator_ColumnPropNameInTable="DataUltConsultaColumn" msprop:Generator_UserColumnName="DataUltConsulta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="retornoLocaSMS" msprop:Generator_ColumnVarNameInTable="columnretornoLocaSMS" msprop:Generator_ColumnPropNameInRow="retornoLocaSMS" msprop:Generator_ColumnPropNameInTable="retornoLocaSMSColumn" msprop:Generator_UserColumnName="retornoLocaSMS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoRetorno" msprop:Generator_ColumnVarNameInTable="columnCodigoRetorno" msprop:Generator_ColumnPropNameInRow="CodigoRetorno" msprop:Generator_ColumnPropNameInTable="CodigoRetornoColumn" msprop:Generator_UserColumnName="CodigoRetorno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ContatosLocaSMS" msprop:Generator_TableClassName="ContatosLocaSMSDataTable" msprop:Generator_TableVarName="tableContatosLocaSMS" msprop:Generator_RowChangedName="ContatosLocaSMSRowChanged" msprop:Generator_TablePropName="ContatosLocaSMS" msprop:Generator_RowDeletingName="ContatosLocaSMSRowDeleting" msprop:Generator_RowChangingName="ContatosLocaSMSRowChanging" msprop:Generator_RowEvHandlerName="ContatosLocaSMSRowChangeEventHandler" msprop:Generator_RowDeletedName="ContatosLocaSMSRowDeleted" msprop:Generator_RowClassName="ContatosLocaSMSRow" msprop:Generator_UserTableName="ContatosLocaSMS" msprop:Generator_RowEvArgName="ContatosLocaSMSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:decimal" />
+              <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bairro" msprop:Generator_ColumnVarNameInTable="columnBairro" msprop:Generator_ColumnPropNameInRow="Bairro" msprop:Generator_ColumnPropNameInTable="BairroColumn" msprop:Generator_UserColumnName="Bairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Endereco" msprop:Generator_ColumnVarNameInTable="columnEndereco" msprop:Generator_ColumnPropNameInRow="Endereco" msprop:Generator_ColumnPropNameInTable="EnderecoColumn" msprop:Generator_UserColumnName="Endereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" msprop:Generator_UserColumnName="Numero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Complemento" msprop:Generator_ColumnVarNameInTable="columnComplemento" msprop:Generator_ColumnPropNameInRow="Complemento" msprop:Generator_ColumnPropNameInTable="ComplementoColumn" msprop:Generator_UserColumnName="Complemento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cep" msprop:Generator_ColumnVarNameInTable="columnCep" msprop:Generator_ColumnPropNameInRow="Cep" msprop:Generator_ColumnPropNameInTable="CepColumn" msprop:Generator_UserColumnName="Cep" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_UserColumnName="Cidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UF" msprop:Generator_ColumnVarNameInTable="columnUF" msprop:Generator_ColumnPropNameInRow="UF" msprop:Generator_ColumnPropNameInTable="UFColumn" msprop:Generator_UserColumnName="UF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataCadastro" msprop:Generator_ColumnVarNameInTable="columnDataCadastro" msprop:Generator_ColumnPropNameInRow="DataCadastro" msprop:Generator_ColumnPropNameInTable="DataCadastroColumn" msprop:Generator_UserColumnName="DataCadastro" type="xs:dateTime" />
+              <xs:element name="DataAlteracao" msprop:Generator_ColumnVarNameInTable="columnDataAlteracao" msprop:Generator_ColumnPropNameInRow="DataAlteracao" msprop:Generator_ColumnPropNameInTable="DataAlteracaoColumn" msprop:Generator_UserColumnName="DataAlteracao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DDD" msprop:Generator_ColumnVarNameInTable="columnDDD" msprop:Generator_ColumnPropNameInRow="DDD" msprop:Generator_ColumnPropNameInTable="DDDColumn" msprop:Generator_UserColumnName="DDD" type="xs:short" minOccurs="0" />
+              <xs:element name="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_UserColumnName="Telefone" type="xs:int" minOccurs="0" />
+              <xs:element name="Celular1" msprop:Generator_ColumnVarNameInTable="columnCelular1" msprop:Generator_ColumnPropNameInRow="Celular1" msprop:Generator_ColumnPropNameInTable="Celular1Column" msprop:Generator_UserColumnName="Celular1" type="xs:int" minOccurs="0" />
+              <xs:element name="Celular2" msprop:Generator_ColumnVarNameInTable="columnCelular2" msprop:Generator_ColumnPropNameInRow="Celular2" msprop:Generator_ColumnPropNameInTable="Celular2Column" msprop:Generator_UserColumnName="Celular2" type="xs:int" minOccurs="0" />
+              <xs:element name="Celular3" msprop:Generator_ColumnVarNameInTable="columnCelular3" msprop:Generator_ColumnPropNameInRow="Celular3" msprop:Generator_ColumnPropNameInTable="Celular3Column" msprop:Generator_UserColumnName="Celular3" type="xs:int" minOccurs="0" />
+              <xs:element name="Celular4" msprop:Generator_ColumnVarNameInTable="columnCelular4" msprop:Generator_ColumnPropNameInRow="Celular4" msprop:Generator_ColumnPropNameInTable="Celular4Column" msprop:Generator_UserColumnName="Celular4" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdEnvioCel1" msprop:Generator_ColumnVarNameInTable="columnQtdEnvioCel1" msprop:Generator_ColumnPropNameInRow="QtdEnvioCel1" msprop:Generator_ColumnPropNameInTable="QtdEnvioCel1Column" msprop:Generator_UserColumnName="QtdEnvioCel1" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdEnvioCel2" msprop:Generator_ColumnVarNameInTable="columnQtdEnvioCel2" msprop:Generator_ColumnPropNameInRow="QtdEnvioCel2" msprop:Generator_ColumnPropNameInTable="QtdEnvioCel2Column" msprop:Generator_UserColumnName="QtdEnvioCel2" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdEnvioCel3" msprop:Generator_ColumnVarNameInTable="columnQtdEnvioCel3" msprop:Generator_ColumnPropNameInRow="QtdEnvioCel3" msprop:Generator_ColumnPropNameInTable="QtdEnvioCel3Column" msprop:Generator_UserColumnName="QtdEnvioCel3" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdEnvioCel4" msprop:Generator_ColumnVarNameInTable="columnQtdEnvioCel4" msprop:Generator_ColumnPropNameInRow="QtdEnvioCel4" msprop:Generator_ColumnPropNameInTable="QtdEnvioCel4Column" msprop:Generator_UserColumnName="QtdEnvioCel4" type="xs:int" minOccurs="0" />
+              <xs:element name="retornoCel1" msprop:Generator_ColumnVarNameInTable="columnretornoCel1" msprop:Generator_ColumnPropNameInRow="retornoCel1" msprop:Generator_ColumnPropNameInTable="retornoCel1Column" msprop:Generator_UserColumnName="retornoCel1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="retornoCel2" msprop:Generator_ColumnVarNameInTable="columnretornoCel2" msprop:Generator_ColumnPropNameInRow="retornoCel2" msprop:Generator_ColumnPropNameInTable="retornoCel2Column" msprop:Generator_UserColumnName="retornoCel2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="retornoCel3" msprop:Generator_ColumnVarNameInTable="columnretornoCel3" msprop:Generator_ColumnPropNameInRow="retornoCel3" msprop:Generator_ColumnPropNameInTable="retornoCel3Column" msprop:Generator_UserColumnName="retornoCel3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="retornoCel4" msprop:Generator_ColumnVarNameInTable="columnretornoCel4" msprop:Generator_ColumnPropNameInRow="retornoCel4" msprop:Generator_ColumnPropNameInTable="retornoCel4Column" msprop:Generator_UserColumnName="retornoCel4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CampanhaItemLocaSMS" msprop:Generator_TableClassName="CampanhaItemLocaSMSDataTable" msprop:Generator_TableVarName="tableCampanhaItemLocaSMS" msprop:Generator_RowChangedName="CampanhaItemLocaSMSRowChanged" msprop:Generator_TablePropName="CampanhaItemLocaSMS" msprop:Generator_RowDeletingName="CampanhaItemLocaSMSRowDeleting" msprop:Generator_RowChangingName="CampanhaItemLocaSMSRowChanging" msprop:Generator_RowEvHandlerName="CampanhaItemLocaSMSRowChangeEventHandler" msprop:Generator_RowDeletedName="CampanhaItemLocaSMSRowDeleted" msprop:Generator_RowClassName="CampanhaItemLocaSMSRow" msprop:Generator_UserTableName="CampanhaItemLocaSMS" msprop:Generator_RowEvArgName="CampanhaItemLocaSMSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdCampanhaLocaSMS" msprop:Generator_ColumnVarNameInTable="columnIdCampanhaLocaSMS" msprop:Generator_ColumnPropNameInRow="IdCampanhaLocaSMS" msprop:Generator_ColumnPropNameInTable="IdCampanhaLocaSMSColumn" msprop:Generator_UserColumnName="IdCampanhaLocaSMS" type="xs:decimal" />
+              <xs:element name="IdContatoLocaSMS" msprop:Generator_ColumnVarNameInTable="columnIdContatoLocaSMS" msprop:Generator_ColumnPropNameInRow="IdContatoLocaSMS" msprop:Generator_ColumnPropNameInTable="IdContatoLocaSMSColumn" msprop:Generator_UserColumnName="IdContatoLocaSMS" type="xs:decimal" />
+              <xs:element name="Destino" msprop:Generator_ColumnVarNameInTable="columnDestino" msprop:Generator_ColumnPropNameInRow="Destino" msprop:Generator_ColumnPropNameInTable="DestinoColumn" msprop:Generator_UserColumnName="Destino" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Operadora" msprop:Generator_ColumnVarNameInTable="columnOperadora" msprop:Generator_ColumnPropNameInRow="Operadora" msprop:Generator_ColumnPropNameInTable="OperadoraColumn" msprop:Generator_UserColumnName="Operadora" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Preso" msprop:Generator_ColumnVarNameInTable="columnPreso" msprop:Generator_ColumnPropNameInRow="Preso" msprop:Generator_ColumnPropNameInTable="PresoColumn" msprop:Generator_UserColumnName="Preso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Resposta" msprop:Generator_ColumnVarNameInTable="columnResposta" msprop:Generator_ColumnPropNameInRow="Resposta" msprop:Generator_ColumnPropNameInTable="RespostaColumn" msprop:Generator_UserColumnName="Resposta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="155" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:dateTime" />
+              <xs:element name="DataEnvio" msprop:Generator_ColumnVarNameInTable="columnDataEnvio" msprop:Generator_ColumnPropNameInRow="DataEnvio" msprop:Generator_ColumnPropNameInTable="DataEnvioColumn" msprop:Generator_UserColumnName="DataEnvio" type="xs:dateTime" />
+              <xs:element name="retornoLocaSMS" msprop:Generator_ColumnVarNameInTable="columnretornoLocaSMS" msprop:Generator_ColumnPropNameInRow="retornoLocaSMS" msprop:Generator_ColumnPropNameInTable="retornoLocaSMSColumn" msprop:Generator_UserColumnName="retornoLocaSMS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoRef" msprop:Generator_ColumnVarNameInTable="columnCodigoRef" msprop:Generator_ColumnPropNameInRow="CodigoRef" msprop:Generator_ColumnPropNameInTable="CodigoRefColumn" msprop:Generator_UserColumnName="CodigoRef">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoLocaSMS" msprop:Generator_ColumnVarNameInTable="columnCodigoLocaSMS" msprop:Generator_ColumnPropNameInRow="CodigoLocaSMS" msprop:Generator_ColumnPropNameInTable="CodigoLocaSMSColumn" msprop:Generator_UserColumnName="CodigoLocaSMS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parametro1" msprop:Generator_ColumnVarNameInTable="columnParametro1" msprop:Generator_ColumnPropNameInRow="Parametro1" msprop:Generator_ColumnPropNameInTable="Parametro1Column" msprop:Generator_UserColumnName="Parametro1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parametro2" msprop:Generator_ColumnVarNameInTable="columnParametro2" msprop:Generator_ColumnPropNameInRow="Parametro2" msprop:Generator_ColumnPropNameInTable="Parametro2Column" msprop:Generator_UserColumnName="Parametro2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parametro3" msprop:Generator_ColumnVarNameInTable="columnParametro3" msprop:Generator_ColumnPropNameInRow="Parametro3" msprop:Generator_ColumnPropNameInTable="Parametro3Column" msprop:Generator_UserColumnName="Parametro3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parametro4" msprop:Generator_ColumnVarNameInTable="columnParametro4" msprop:Generator_ColumnPropNameInRow="Parametro4" msprop:Generator_ColumnPropNameInTable="Parametro4Column" msprop:Generator_UserColumnName="Parametro4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parametro5" msprop:Generator_ColumnVarNameInTable="columnParametro5" msprop:Generator_ColumnPropNameInRow="Parametro5" msprop:Generator_ColumnPropNameInTable="Parametro5Column" msprop:Generator_UserColumnName="Parametro5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Seq_CampanhaLocaSMS" msprop:Generator_TableClassName="Seq_CampanhaLocaSMSDataTable" msprop:Generator_TableVarName="tableSeq_CampanhaLocaSMS" msprop:Generator_TablePropName="Seq_CampanhaLocaSMS" msprop:Generator_RowDeletingName="Seq_CampanhaLocaSMSRowDeleting" msprop:Generator_RowChangingName="Seq_CampanhaLocaSMSRowChanging" msprop:Generator_RowEvHandlerName="Seq_CampanhaLocaSMSRowChangeEventHandler" msprop:Generator_RowDeletedName="Seq_CampanhaLocaSMSRowDeleted" msprop:Generator_UserTableName="Seq_CampanhaLocaSMS" msprop:Generator_RowChangedName="Seq_CampanhaLocaSMSRowChanged" msprop:Generator_RowEvArgName="Seq_CampanhaLocaSMSRowChangeEvent" msprop:Generator_RowClassName="Seq_CampanhaLocaSMSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UsuariosLocaSMS" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="CampanhaLocaSMS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CampanhaLocaSMS" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="ContatosLocaSMS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ContatosLocaSMS" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="CampanhaItemLocaSMS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CampanhaItemLocaSMS" />
+      <xs:field xpath="mstns:IdCampanhaLocaSMS" />
+      <xs:field xpath="mstns:IdContatoLocaSMS" />
+    </xs:unique>
+    <xs:unique name="Seq_CampanhaLocaSMS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Seq_CampanhaLocaSMS" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_CampanhaItemLocaSMS_0_0" msdata:parent="ContatosLocaSMS" msdata:child="CampanhaItemLocaSMS" msdata:parentkey="Id" msdata:childkey="IdContatoLocaSMS" msprop:Generator_UserChildTable="CampanhaItemLocaSMS" msprop:Generator_ChildPropName="GetCampanhaItemLocaSMSRows" msprop:Generator_UserRelationName="FK_CampanhaItemLocaSMS_0_0" msprop:Generator_RelationVarName="relationFK_CampanhaItemLocaSMS_0_0" msprop:Generator_UserParentTable="ContatosLocaSMS" msprop:Generator_ParentPropName="ContatosLocaSMSRow" />
+      <msdata:Relationship name="FK_CampanhaItemLocaSMS_1_0" msdata:parent="CampanhaLocaSMS" msdata:child="CampanhaItemLocaSMS" msdata:parentkey="Id" msdata:childkey="IdCampanhaLocaSMS" msprop:Generator_UserChildTable="CampanhaItemLocaSMS" msprop:Generator_ChildPropName="GetCampanhaItemLocaSMSRows" msprop:Generator_UserRelationName="FK_CampanhaItemLocaSMS_1_0" msprop:Generator_RelationVarName="relationFK_CampanhaItemLocaSMS_1_0" msprop:Generator_UserParentTable="CampanhaLocaSMS" msprop:Generator_ParentPropName="CampanhaLocaSMSRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

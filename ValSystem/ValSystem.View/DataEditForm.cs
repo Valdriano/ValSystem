@@ -108,5 +108,10 @@ namespace ValSystem.View
             this.LocalizartoolStripButton.Visible = localizar;
             this.FechartoolStripButton.Visible = fechar;
         }
+
+        public void BloquearMenu( bool valor = false )
+        {
+            this.toolStrip1.Enabled = !valor;
+        }
     }
 }

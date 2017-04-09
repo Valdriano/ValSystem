@@ -22,6 +22,6 @@ namespace ValSystem.Model.Entity
         public string Descricao { get; set; }
 
         [ForeignKey( "Pais" )]
-        public virtual HashSet<UF> UFs { get; set; }
+        public virtual ICollection<UF> UFs { get; set; }
     }
 }

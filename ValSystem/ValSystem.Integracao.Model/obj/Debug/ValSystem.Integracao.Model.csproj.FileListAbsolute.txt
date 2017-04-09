@@ -11,3 +11,4 @@ C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Mod
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Model\bin\Debug\EntityFramework.xml
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Model\bin\Debug\System.Data.SQLite.xml
+C:\Users\VALDRIANO\Documents\GitHub\ValSystem\ValSystem\ValSystem.Integracao.Model\obj\Debug\ValSystem.Integracao.Model.csprojResolveAssemblyReference.cache
